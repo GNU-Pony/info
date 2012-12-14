@@ -70,7 +70,7 @@
     /var/run -> /bin	State information
     /var/spool		Non-removable cache
     /var/spool/mail -> /var/mail
-  /var/tmp	        Preservabel temporary files
+  /var/tmp	        Preservable temporary files
 
 
 $bindir			/usr/bin
