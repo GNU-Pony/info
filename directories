@@ -1,0 +1,99 @@
+/				The root filesystem
+  /bin				Essential command binaries
+  /boot				Static bootloader files
+  /dev				Device files
+    /dev/shm			Shared memory
+  /etc				Host-specific configuration
+    /etc/opt			Configuration files for /opt/
+  /home				User directories
+  /info				Administrated shared files
+  /lib -> /usr/lib		Essential shared libraries and kernel modules
+  /lost+found			Filesystem-specific recoverable data
+  /media			Mount points for removable media
+  /mnt				Temporary mount points
+  /opt				Self contained packages, add-on packages, and compat pacakges
+  /proc				Process information
+  /root				Administrator directory
+  /run				State information
+  /sbin				System binaries
+  /share			Shared user directory
+  /srv				Service data
+  /sys				System access files
+  /tmp				Temporary files
+  /usr				Shareable, read-only data
+    /usr/bin			Binaries
+    /usr/games -> /usr/bin	Game binaries
+    /usr/doc			Non-info, non-man documentation
+    /usr/lib			Libraries for the binaries in /usr/bin/ and /usr/sbin/
+    /usr/libexec		Library commands
+    /usr/libmulti		Multilib libraries
+    /usr/sbin			System binaries
+    /usr/share			Architecture independent data
+      /usr/share/dict		Word lists
+      /usr/share/doc -> /usr/doc
+      /usr/share/man		Manpage manuals
+      /usr/share/info		Info manuals
+      /usr/share/misc		Miscellaneous arcitecture-independent data
+    /usr/src			Source code
+    /usr/local			Local hierarchy
+      /usr/local/bin
+      /usr/local/doc
+      /usr/local/etc
+      /usr/local/games -> /usr/local/bin
+      /usr/local/include
+      /usr/local/lib
+      /usr/local/libexec
+      /usr/local/libmulti
+      /usr/local/man -> /usr/share/man
+      /usr/local/info -> /usr/share/info
+      /usr/local/sbin
+      /usr/local/share
+        /usr/local/share/doc -> /usr/local/doc
+        /usr/local/share/man -> /usr/share/man
+        /usr/local/share/info -> /usr/share/info
+      /usr/local/src
+  /var			Variable files
+    /var/cache		Removeable cache
+    /var/empty
+    /var/games		Variable game data, such as high scores
+    /var/lib		State information
+    /var/local		Variable data for /usr/local
+      /var/local/cache
+      /var/local/games
+      /var/local/lib
+      /var/local/lock
+      /var/local/spool
+    /var/lock		Unsharable lock data
+    /var/log		Log files
+    /var/opt		Variable data for /opt
+    /var/mail		User mail
+    /var/run -> /bin	State information
+    /var/spool		Non-removable cache
+    /var/spool/mail -> /var/mail
+  /var/tmp	        Preservabel temporary files
+
+
+$bindir			/usr/bin
+$sbindir		/usr/sbin
+$libdir			/usr/lib
+$multilibdir		/usr/libmulti
+$libexecdir		/usr/libexec
+$gamedir		/usr/lib
+$datadir		/usr/share
+$docdir			/usr/doc
+$sysbindir		/bin
+$ssysbindir		/sbin
+$optdir			/opt
+$cachedir		/var/cache
+$spooldir		/var/spool
+$logdir			/var/log
+$lockdir		/var/lock
+$statedir		/var/lib
+$tmpdir			/tmp
+$ptmpdir		/var/tmp
+$srvdir			/srv
+$confdir		/etc
+$optconfdir		/etc/opt
+$infodir		/usr/share/info
+$mandir			/usr/share/man
+
