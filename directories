@@ -78,7 +78,7 @@ $sbindir		/usr/sbin
 $libdir			/usr/lib
 $multilibdir		/usr/libmulti
 $libexecdir		/usr/libexec
-$gamedir		/usr/lib
+$gamedir		/usr/bin
 $datadir		/usr/share
 $docdir			/usr/doc
 $sysbindir		/bin
