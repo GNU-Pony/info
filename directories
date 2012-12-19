@@ -67,7 +67,7 @@
     /var/log		Log files
     /var/opt		Variable data for /opt
     /var/mail		User mail
-    /var/run -> /bin	State information
+    /var/run -> /run	State information
     /var/spool		Non-removable cache
       /var/spool/mail -> /var/mail
     /var/tmp	        Preservable temporary files
