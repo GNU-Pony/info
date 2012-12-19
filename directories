@@ -69,8 +69,8 @@
     /var/mail		User mail
     /var/run -> /bin	State information
     /var/spool		Non-removable cache
-    /var/spool/mail -> /var/mail
-  /var/tmp	        Preservable temporary files
+      /var/spool/mail -> /var/mail
+    /var/tmp	        Preservable temporary files
 
 
 $bindir			/usr/bin
