@@ -8,6 +8,7 @@
   /home				User directories
   /info				Administrated shared files
   /lib -> /usr/lib		Essential shared libraries and kernel modules
+  /lib64 ->/usr/lib		(x86_64 only)
   /lost+found			Filesystem-specific recoverable data
   /media			Mount points for removable media
   /mnt				Temporary mount points
@@ -25,6 +26,7 @@
     /usr/games -> /usr/bin	Game binaries
     /usr/doc			Non-info, non-man documentation
     /usr/lib			Libraries for the binaries in /usr/bin/ and /usr/sbin/
+    /usr/lib64 ->/usr/lib	(x86_64 only)
     /usr/libexec		Library commands
     /usr/libmulti		Multilib libraries
     /usr/sbin			System binaries
