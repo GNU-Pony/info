@@ -1,121 +1,147 @@
 core	Essential packages     (high priority support)
 extra	Recommended packages (medium priority support)
 more	Additional packages     (low priority support)
+limbo   Dead packages            (no priority support)
 
 
 :: file archives and compression
 core/archive
 extra/archive
 more/archive
+limbo/archive
 
 :: eye candy packages
 extra/candy
 more/candy
+limbo/candy
 
 :: database packages
 extra/database
 more/database
+limbo/database
 
 :: graphical desktops and display servers
 extra/desktop
 more/desktop
+limbo/desktop
 
 :: software development and package building
 core/devel
 extra/devel
 more/devel
+limbo/devel
 
 :: file systems, partations, hard disk and other storages
 core/disc
 extra/disc
 more/disc
+limbo/disc
 
 :: distributed jobs
 extra/distributed
 more/distributed
+limbo/distributed
 
 :: text editors
 core/editor
 extra/editor
 more/editor
+limbo/editor
 
 :: education software
 extra/education
 more/education
+limbo/education
 
 :: hardware emulation and compatibilty layers
 extra/emulator
 more/emulator
+limbo/emulator
 
 :: font packages
 core/font
 extra/font
 more/font
+limbo/font
 
 :: game packages
 extra/game
 more/game
+limbo/game
 
 :: internationalisation packages
 core/internationalisation
 extra/internationalisation
 more/internationalisation
+limbo/internationalisation
 
 :: internet related packages, such as e-mail, http, ftp and gopher packages
 core/internet
 extra/internet
 more/internet
+limbo/internet
 
 :: OS kernels
 core/kernel
 extra/kernel
 more/kernel
+limbo/kernel
 
 :: library package
 core/library
 extra/library
 more/library
+limbo/library
 
 :: miscellaneous package
 core/miscellaneous
 extra/miscellaneous
 more/miscellaneous
+limbo/miscellaneous
 
 :: multilib library package
 core/multilibrary
 extra/multilibrary
 more/multilibrary
+limbo/multilibrary
 
 :: video, audio, image editors, players and recorders
 extra/multimedia
 more/multimedia
+limbo/multimedia
 
 :: network related packages
 core/network
 extra/network
 more/network
+limbo/network
 
 :: text and word processing and similar packages
 core/office
 extra/office
 more/office
+limbo/office
 
 :: scientific pacakges
 extra/science
 more/science
+limbo/
 
 :: security packages
 core/security
 extra/security
 more/security
+limbo/security
 
 :: non-kernel system packages
 core/system
 extra/system
 more/system
+limbo/system
 
 :: document and documentation viewers
 core/viewer
 extra/viewer
 more/viewer
+limbo/viewer
 
