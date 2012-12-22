@@ -1,0 +1,121 @@
+core	Essential packages     (high priority support)
+extra	Recommended packages (medium priority support)
+more	Additional packages     (low priority support)
+
+
+:: file archives and compression
+core/archive
+extra/archive
+more/archive
+
+:: eye candy packages
+extra/candy
+more/candy
+
+:: database packages
+extra/database
+more/database
+
+:: graphical desktops and display servers
+extra/desktop
+more/desktop
+
+:: software development and package building
+core/devel
+extra/devel
+more/devel
+
+:: file systems, partations, hard disk and other storages
+core/disc
+extra/disc
+more/disc
+
+:: distributed jobs
+extra/distributed
+more/distributed
+
+:: text editors
+core/editor
+extra/editor
+more/editor
+
+:: education software
+extra/education
+more/education
+
+:: hardware emulation and compatibilty layers
+extra/emulator
+more/emulator
+
+:: font packages
+core/font
+extra/font
+more/font
+
+:: game packages
+extra/game
+more/game
+
+:: internationalisation packages
+core/internationalisation
+extra/internationalisation
+more/internationalisation
+
+:: internet related packages, such as e-mail, http, ftp and gopher packages
+core/internet
+extra/internet
+more/internet
+
+:: OS kernels
+core/kernel
+extra/kernel
+more/kernel
+
+:: library package
+core/library
+extra/library
+more/library
+
+:: miscellaneous package
+core/miscellaneous
+extra/miscellaneous
+more/miscellaneous
+
+:: multilib library package
+core/multilibrary
+extra/multilibrary
+more/multilibrary
+
+:: video, audio, image editors, players and recorders
+extra/multimedia
+more/multimedia
+
+:: network related packages
+core/network
+extra/network
+more/network
+
+:: text and word processing and similar packages
+core/office
+extra/office
+more/office
+
+:: scientific pacakges
+extra/science
+more/science
+
+:: security packages
+core/security
+extra/security
+more/security
+
+:: non-kernel system packages
+core/system
+extra/system
+more/system
+
+:: document and documentation viewers
+core/viewer
+extra/viewer
+more/viewer
+
