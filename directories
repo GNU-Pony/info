@@ -31,10 +31,12 @@
     /usr/libmulti		Multilib libraries
     /usr/sbin			System binaries
     /usr/share			Architecture independent data
+      /usr/share/changelogs	Change logs for packages
       /usr/share/dict		Word lists
       /usr/share/doc -> /usr/doc
-      /usr/share/man		Manpage manuals
       /usr/share/info		Info manuals
+      /usr/share/licenses	Licences for packages
+      /usr/share/man		Manpage manuals
       /usr/share/misc		Miscellaneous arcitecture-independent data
     /usr/src			Source code
     /usr/local			Local hierarchy
@@ -50,9 +52,11 @@
       /usr/local/info -> /usr/share/info
       /usr/local/sbin
       /usr/local/share
+        /usr/local/share/changelog
         /usr/local/share/doc -> /usr/local/doc
-        /usr/local/share/man -> /usr/share/man
         /usr/local/share/info -> /usr/share/info
+	/usr/local/share/licenses
+        /usr/local/share/man -> /usr/share/man
       /usr/local/src
   /var			Variable files
     /var/cache		Removeable cache
