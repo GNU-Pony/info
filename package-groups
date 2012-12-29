@@ -122,10 +122,15 @@ extra/office
 more/office
 limbo/office
 
+:: utilities to manage stuff on your computer that does not belong to the system
+extra/offsystem
+more/offsystem
+limbo/offsystem
+
 :: scientific pacakges
 extra/science
 more/science
-limbo/
+limbo/science
 
 :: security packages
 core/security
