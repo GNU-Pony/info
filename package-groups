@@ -4,6 +4,11 @@ more	Additional packages     (low priority support)
 limbo   Dead packages            (no priority support)
 
 
+:: Accessibility packages
+extra/accessibility
+more/accessibility
+limbo/accessibility
+
 :: file archives and compression
 core/archive
 extra/archive
