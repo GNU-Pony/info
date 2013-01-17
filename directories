@@ -186,14 +186,14 @@ in .hidden files [not like gobohide] and add:
     |   ¦   source -> /usr/local/src
     |   ¦   resources -> /usr/local/share
     |   ¦   games -> /var/local/games
-    |	¦   runtime
+    |   ¦   runtime
     |   ¦   ¦   locks -> /var/local/lock
     |   ¦   ¦   state -> /var/local/lib
     |
-    user
-    |   homes -> /home
-    |   shared
-    |   ¦   unadministrated -> /share
+    users
+    |   private -> /home
+    |   public
+    |   ¦   shared -> /share
     |   ¦   administrated -> /info
     |   ¦   mounted -> /media
   
