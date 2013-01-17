@@ -7,8 +7,8 @@
     /etc/opt			Configuration files for /opt/
   /home				User directories
   /info				Administrated shared files
-  /lib -> /usr/lib		Essential shared libraries and kernel modules
-  /lib64 ->/usr/lib		(x86_64 only)
+  /lib   -> /usr/lib		Essential shared libraries and kernel modules
+  /lib64 -> /usr/lib		(x86_64 only)
   /lost+found			Filesystem-specific recoverable data
   /media			Mount points for removable media
   /mnt				Temporary mount points
@@ -26,7 +26,7 @@
     /usr/games -> /usr/bin	Game binaries
     /usr/doc			Non-info, non-man documentation
     /usr/lib			Libraries for the binaries in /usr/bin/ and /usr/sbin/
-    /usr/lib64 ->/usr/lib	(x86_64 only)
+    /usr/lib64 -> /usr/lib	(x86_64 only)
     /usr/libexec		Library commands
     /usr/libmulti		Multilib libraries
     /usr/include		Library headers
@@ -49,15 +49,15 @@
       /usr/local/lib
       /usr/local/libexec
       /usr/local/libmulti
-      /usr/local/man -> /usr/share/man
-      /usr/local/info -> /usr/share/info
+      /usr/local/man   -> /usr/share/man
+      /usr/local/info  -> /usr/share/info
       /usr/local/sbin
       /usr/local/share
         /usr/local/share/changelog
-        /usr/local/share/doc -> /usr/local/doc
+        /usr/local/share/doc  -> /usr/local/doc
         /usr/local/share/info -> /usr/share/info
 	/usr/local/share/licenses
-        /usr/local/share/man -> /usr/share/man
+        /usr/local/share/man  -> /usr/share/man
       /usr/local/src
   /var			Variable files
     /var/cache		Removeable cache
@@ -114,30 +114,30 @@ in .hidden files [not like gobohide] and add:
     system
     |   essentials
     |   ¦   maintainance -> $sysbindir
-    |   ¦   system -> $ssysbindir
-    |   ¦   libraries -> /lib
+    |   ¦   system       -> $ssysbindir
+    |   ¦   libraries    -> /lib
     |   ¦   {if /lib64 ≠ /lib and /lib64 exists}
     |   ¦    libraries64 -> /lib64
     |   applications
-    |   ¦   commands -> $sbindir
-    |   ¦   libraries -> $libdir
+    |   ¦   commands       -> $sbindir
+    |   ¦   libraries      -> $libdir
     |   ¦   {if ${libdir}64 ≠ $libdir and ${libdir}64 exists}
-    |   ¦    libraries64 -> ${libdir}64
+    |   ¦    libraries64   -> ${libdir}64
     |   ¦   multilibraries -> $multilibdir
-    |   ¦   execlibraries -> $libexecdir
-    |   ¦   headers -> /usr/include
-    |   ¦   mail -> /var/mail
-    |   ¦   games -> /var/games
+    |   ¦   execlibraries  -> $libexecdir
+    |   ¦   headers        -> /usr/include
+    |   ¦   mail           -> /var/mail
+    |   ¦   games          -> /var/games
     |   boot -> /boot
     |   kernel
-    |   ¦   devices -> /dev
+    |   ¦   devices   -> /dev
     |   ¦   processes -> /proc
-    |   ¦   access -> /sys
-    |   ¦   state -> /run
+    |   ¦   access    -> /sys
+    |   ¦   state     -> /run
     |   admininstrator -> /root
-    |   logs -> $logdir
-    |   source -> /usr/src
-    |   empty -> /var/empty
+    |   logs      -> $logdir
+    |   source    -> /usr/src
+    |   empty     -> /var/empty
     |   resources -> $datadir
     |	runtime
     |   ¦   locks -> $lockdir
@@ -145,47 +145,47 @@ in .hidden files [not like gobohide] and add:
     |
     temporary
     |   persistent -> $ptmpdir
-    |   transient -> $tmpdir
-    |   shared -> /dev/shm
-    |   cache -> $cachedir
-    |   spool -> $spooldir
-    |   large -> /var/opt
+    |   transient  -> $tmpdir
+    |   shared     -> /dev/shm
+    |   cache      -> $cachedir
+    |   spool      -> $spooldir
+    |   large      -> /var/opt
     |   host
     |   ¦   cache -> /var/local/cache
     |   ¦   spool -> /var/local/spool
     |   mount -> /mnt
     |
     applications
-    |   commands -> $bindir
+    |   commands       -> $bindir
     |   {if $bindir ≠ $gamedir}
-    |    games -> $gamedir
+    |    games         -> $gamedir
     |   documentations -> $docdir
-    |   licenses -> $datadir/licenses
-    |   changelogs -> $datadir/changelog
-    |   large -> $optdir
+    |   licenses       -> $datadir/licenses
+    |   changelogs     -> $datadir/changelog
+    |   large          -> $optdir
     |
     host
     |   configurations
     |   ¦   system -> $confdir
-    |   ¦   local -> /usr/local/etc
-    |   ¦   large -> $optconfdir
+    |   ¦   local  -> /usr/local/etc
+    |   ¦   large  -> $optconfdir
     |   service -> $srvdir
     |   applications
-    |   ¦   commands -> /usr/local/bin
+    |   ¦   commands       -> /usr/local/bin
     |   ¦   {if /usr/local/games ≠ /usr/local/bin}
-    |   ¦    games -> /usr/local/games
+    |   ¦    games         -> /usr/local/games
     |   ¦   documentations -> /usr/local/doc
-    |   ¦   licenses -> /usr/local/share/licenses
-    |   ¦   changelogs -> /usr/local/share/changelog
+    |   ¦   licenses       -> /usr/local/share/licenses
+    |   ¦   changelogs     -> /usr/local/share/changelog
     |   system
-    |   ¦   commands -> /usr/local/sbin
-    |   ¦   libraries -> /usr/local/lib
+    |   ¦   commands       -> /usr/local/sbin
+    |   ¦   libraries      -> /usr/local/lib
     |   ¦   multilibraries -> /usr/local/libmulti
-    |   ¦   execlibraries -> /usr/local/libexec
-    |   ¦   headers -> /usr/local/include
-    |   ¦   source -> /usr/local/src
-    |   ¦   resources -> /usr/local/share
-    |   ¦   games -> /var/local/games
+    |   ¦   execlibraries  -> /usr/local/libexec
+    |   ¦   headers        -> /usr/local/include
+    |   ¦   source         -> /usr/local/src
+    |   ¦   resources      -> /usr/local/share
+    |   ¦   games          -> /var/local/games
     |   ¦   runtime
     |   ¦   ¦   locks -> /var/local/lock
     |   ¦   ¦   state -> /var/local/lib
@@ -193,7 +193,7 @@ in .hidden files [not like gobohide] and add:
     users
     |   private -> /home
     |   public
-    |   ¦   shared -> /share
+    |   ¦   shared        -> /share
     |   ¦   administrated -> /info
-    |   ¦   mounted -> /media
-  
+    |   ¦   mounted       -> /media
+
