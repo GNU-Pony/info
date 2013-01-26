@@ -1,83 +1,83 @@
-/				The root filesystem
-  /bin				Essential command binaries
-  /boot				Static bootloader files
-  /dev				Device files
-    /dev/shm			Shared memory
-  /etc				Host-specific configuration
-    /etc/opt			Configuration files for /opt/
-  /home				User directories
-  /info				Administrated shared files
-  /lib   -> /usr/lib		Essential shared libraries and kernel modules
-  /lib64 -> /usr/lib		(x86_64 only)
-  /lost+found			Filesystem-specific recoverable data
-  /media			Mount points for removable media
-  /mnt				Temporary mount points
-  /opt				Self contained packages, add-on packages, and compat pacakges
-  /proc				Process information
-  /root				Administrator directory
-  /run				State information
-  /sbin				System binaries
-  /share			Shared user directory
-  /srv				Service data
-  /sys				System access files
-  /tmp				Temporary files
-  /usr				Shareable, read-only data
-    /usr/bin			Binaries
-    /usr/games -> /usr/bin	Game binaries
-    /usr/doc			Non-info, non-man documentation
-    /usr/lib			Libraries for the binaries in /usr/bin/ and /usr/sbin/
-    /usr/lib64 -> /usr/lib	(x86_64 only)
-    /usr/libexec		Library commands
-    /usr/libmulti		Multilib libraries
-    /usr/include		Library headers
-    /usr/sbin			System binaries
-    /usr/share			Architecture independent data
-      /usr/share/changelogs	Change logs for packages
-      /usr/share/dict		Word lists
-      /usr/share/doc -> /usr/doc
-      /usr/share/info		Info manuals
-      /usr/share/licenses	Licences for packages
-      /usr/share/man		Manpage manuals
-      /usr/share/misc		Miscellaneous arcitecture-independent data
-    /usr/src			Source code
-    /usr/local			Local hierarchy
-      /usr/local/bin
-      /usr/local/doc
-      /usr/local/etc
-      /usr/local/games -> /usr/local/bin
-      /usr/local/include
-      /usr/local/lib
-      /usr/local/libexec
-      /usr/local/libmulti
-      /usr/local/man   -> /usr/share/man
-      /usr/local/info  -> /usr/share/info
-      /usr/local/sbin
-      /usr/local/share
-        /usr/local/share/changelog
-        /usr/local/share/doc  -> /usr/local/doc
-        /usr/local/share/info -> /usr/share/info
-	/usr/local/share/licenses
-        /usr/local/share/man  -> /usr/share/man
-      /usr/local/src
-  /var			Variable files
-    /var/cache		Removeable cache
-    /var/empty
-    /var/games		Variable game data, such as high scores
-    /var/lib		State information
-    /var/local		Variable data for /usr/local
-      /var/local/cache
-      /var/local/games
-      /var/local/lib
-      /var/local/lock
-      /var/local/spool
-    /var/lock		Unsharable lock data
-    /var/log		Log files
-    /var/opt		Variable data for /opt
-    /var/mail		User mail
-    /var/run -> /run	State information
-    /var/spool		Non-removable cache
-      /var/spool/mail -> /var/mail
-    /var/tmp	        Preservable temporary files
+/					The root filesystem
+├──/bin					Essential command binaries
+├──/boot				Static bootloader files
+├──/dev					Device files
+│  └──/dev/shm				Shared memory
+├──/etc					Host-specific configuration
+│  └──/etc/opt				Configuration files for /opt/
+├──/home				User directories
+├──/info				Administrated shared files
+├──/lib   -> /usr/lib			Essential shared libraries and kernel modules
+├──/lib64 -> /usr/lib			(x86_64 only)
+├──/lost+found				Filesystem-specific recoverable data
+├──/media				Mount points for removable media
+├──/mnt					Temporary mount points
+├──/opt					Self contained packages, add-on packages, and compat pacakges
+├──/proc				Process information
+├──/root				Administrator directory
+├──/run					State information
+├──/sbin				System binaries
+├──/share				Shared user directory
+├──/srv					Service data
+├──/sys					System access files
+├──/tmp					Temporary files
+├──/usr					Shareable, read-only data
+│  ├──/usr/bin				Binaries
+│  ├──/usr/games -> /usr/bin		Game binaries
+│  ├──/usr/doc				Non-info, non-man documentation
+│  ├──/usr/lib				Libraries for the binaries in /usr/bin/ and /usr/sbin/
+│  ├──/usr/lib64 -> /usr/lib		(x86_64 only)
+│  ├──/usr/libexec			Library commands
+│  ├──/usr/libmulti			Multilib libraries
+│  ├──/usr/include			Library headers
+│  ├──/usr/sbin				System binaries
+│  ├──/usr/share			Architecture independent data
+│  │  ├──/usr/share/changelogs		Change logs for packages
+│  │  ├──/usr/share/dict		Word lists
+│  │  ├──/usr/share/doc			-> /usr/doc
+│  │  ├──/usr/share/info		Info manuals
+│  │  ├──/usr/share/licenses		Licences for packages
+│  │  ├──/usr/share/man			Manpage manuals
+│  │  └──/usr/share/misc		Miscellaneous arcitecture-independent data
+│  ├──/usr/src				Source code
+│  └──/usr/local			Local hierarchy
+│     ├──/usr/local/bin
+│     ├──/usr/local/doc
+│     ├──/usr/local/etc
+│     ├──/usr/local/games		-> /usr/local/bin
+│     ├──/usr/local/include
+│     ├──/usr/local/lib
+│     ├──/usr/local/libexec
+│     ├──/usr/local/libmulti
+│     ├──/usr/local/man			-> /usr/share/man
+│     ├──/usr/local/info		-> /usr/share/info
+│     ├──/usr/local/sbin
+│     ├──/usr/local/share
+│     │  ├──/usr/local/share/changelog
+│     │  ├──/usr/local/share/doc	-> /usr/local/doc
+│     │  └──/usr/local/share/info	-> /usr/share/info
+│     ├──/usr/local/share/licenses
+│     │  └──/usr/local/share/man	-> /usr/share/man
+│     └──/usr/local/src
+└──/var					Variable files
+   ├──/var/cache			Removeable cache
+   ├──/var/empty	                Empty directory
+   ├──/var/games			Variable game data, such as high scores
+   ├──/var/lib				State information
+   ├──/var/local			Variable data for /usr/local
+   │  ├──/var/local/cache
+   │  ├──/var/local/games
+   │  ├──/var/local/lib
+   │  ├──/var/local/lock
+   │  └──/var/local/spool
+   ├──/var/lock				Unsharable lock data
+   ├──/var/log				Log files
+   ├──/var/opt				Variable data for /opt
+   ├──/var/mail				User mail
+   ├──/var/run -> /run			State information
+   ├──/var/spool			Non-removable cache
+   │  └──/var/spool/mail		-> /var/mail
+   └──/var/tmp				Preservable temporary files
 
 
 $bindir			/usr/bin
@@ -110,90 +110,86 @@ With optional extension that puts normal directories
 in .hidden files [not like gobohide] and add:
 
 /
-  localhost
-    system
-    |   essentials
-    |   ¦   maintainance -> $sysbindir
-    |   ¦   system       -> $ssysbindir
-    |   ¦   libraries    -> /lib
-    |   ¦   {if /lib64 ≠ /lib and /lib64 exists}
-    |   ¦    libraries64 -> /lib64
-    |   applications
-    |   ¦   commands       -> $sbindir
-    |   ¦   libraries      -> $libdir
-    |   ¦   {if ${libdir}64 ≠ $libdir and ${libdir}64 exists}
-    |   ¦    libraries64   -> ${libdir}64
-    |   ¦   multilibraries -> $multilibdir
-    |   ¦   execlibraries  -> $libexecdir
-    |   ¦   headers        -> /usr/include
-    |   ¦   mail           -> /var/mail
-    |   ¦   games          -> /var/games
-    |   boot -> /boot
-    |   kernel
-    |   ¦   devices   -> /dev
-    |   ¦   processes -> /proc
-    |   ¦   access    -> /sys
-    |   ¦   state     -> /run
-    |   admininstrator -> /root
-    |   logs      -> $logdir
-    |   source    -> /usr/src
-    |   empty     -> /var/empty
-    |   resources -> $datadir
-    |	runtime
-    |   ¦   locks -> $lockdir
-    |   ¦   state -> $statedir
-    |
-    temporary
-    |   persistent -> $ptmpdir
-    |   transient  -> $tmpdir
-    |   shared     -> /dev/shm
-    |   cache      -> $cachedir
-    |   spool      -> $spooldir
-    |   large      -> /var/opt
-    |   host
-    |   ¦   cache -> /var/local/cache
-    |   ¦   spool -> /var/local/spool
-    |   mount -> /mnt
-    |
-    applications
-    |   commands       -> $bindir
-    |   {if $bindir ≠ $gamedir}
-    |    games         -> $gamedir
-    |   documentations -> $docdir
-    |   licenses       -> $datadir/licenses
-    |   changelogs     -> $datadir/changelog
-    |   large          -> $optdir
-    |
-    host
-    |   configurations
-    |   ¦   system -> $confdir
-    |   ¦   local  -> /usr/local/etc
-    |   ¦   large  -> $optconfdir
-    |   service -> $srvdir
-    |   applications
-    |   ¦   commands       -> /usr/local/bin
-    |   ¦   {if /usr/local/games ≠ /usr/local/bin}
-    |   ¦    games         -> /usr/local/games
-    |   ¦   documentations -> /usr/local/doc
-    |   ¦   licenses       -> /usr/local/share/licenses
-    |   ¦   changelogs     -> /usr/local/share/changelog
-    |   system
-    |   ¦   commands       -> /usr/local/sbin
-    |   ¦   libraries      -> /usr/local/lib
-    |   ¦   multilibraries -> /usr/local/libmulti
-    |   ¦   execlibraries  -> /usr/local/libexec
-    |   ¦   headers        -> /usr/local/include
-    |   ¦   source         -> /usr/local/src
-    |   ¦   resources      -> /usr/local/share
-    |   ¦   games          -> /var/local/games
-    |   ¦   runtime
-    |   ¦   ¦   locks -> /var/local/lock
-    |   ¦   ¦   state -> /var/local/lib
-    |
-    users
-    |   private -> /home
-    |   public
-    |   ¦   shared        -> /share
-    |   ¦   administrated -> /info
-    |   ¦   mounted       -> /media
+└──localhost
+   ├──system
+   │  ├──essentials
+   │  │  ├──maintainance	-> $sysbindir
+   │  │  ├──system		-> $ssysbindir
+   │  │  ├──libraries		-> /lib
+   │  │  └──libraries64		-> /lib64  {if /lib64 ≠ /lib and /lib64 exists}
+   │  ├──applications
+   │  │  ├──commands		-> $sbindir
+   │  │  ├──libraries		-> $libdir
+   │  │  ├──libraries64		-> ${libdir}64  {if ${libdir}64 ≠ $libdir and ${libdir}64 exists}
+   │  │  ├──multilibraries	-> $multilibdir
+   │  │  ├──execlibraries	-> $libexecdir
+   │  │  ├──headers		-> /usr/include
+   │  │  ├──mail		-> /var/mail
+   │  │  └──games		-> /var/games
+   │  ├──boot			-> /boot
+   │  ├──kernel
+   │  │  ├──devices		-> /dev
+   │  │  ├──processes		-> /proc
+   │  │  ├──access		-> /sys
+   │  │  └──state		-> /run
+   │  ├──admininstrator		-> /root
+   │  ├──logs			-> $logdir
+   │  ├──source			-> /usr/src
+   │  ├──empty			-> /var/empty
+   │  ├──resources		-> $datadir
+   │  └──runtime
+   │     ├──locks		-> $lockdir
+   │     └──state		-> $statedir
+   │
+   ├──temporary
+   │  ├──persistent		-> $ptmpdir
+   │  ├──transient		-> $tmpdir
+   │  ├──shared			-> /dev/shm
+   │  ├──cache			-> $cachedir
+   │  ├──spool			-> $spooldir
+   │  ├──large			-> /var/opt
+   │  ├──host
+   │  │  ├──cache		-> /var/local/cache
+   │  │  └──spool		-> /var/local/spool
+   │  └──mount			-> /mnt
+   │
+   ├──applications
+   │  ├──commands		-> $bindir
+   │  ├──games			-> $gamedir  {if $bindir ≠ $gamedir}
+   │  ├──documentations		-> $docdir
+   │  ├──licenses		-> $datadir/licenses
+   │  ├──changelogs		-> $datadir/changelog
+   │  └──large			-> $optdir
+   │
+   ├──host
+   │  ├──configurations
+   │  │  ├──system		-> $confdir
+   │  │  ├──local		-> /usr/local/etc
+   │  │  └──large		-> $optconfdir
+   │  ├──service		-> $srvdir
+   │  ├──applications
+   │  │  ├──commands		-> /usr/local/bin
+   │  │  ├──games		-> /usr/local/games  {if /usr/local/games ≠ /usr/local/bin}
+   │  │  ├──documentations	-> /usr/local/doc
+   │  │  ├──licenses		-> /usr/local/share/licenses
+   │  │  └──changelogs		-> /usr/local/share/changelog
+   │  └──system
+   │     ├──commands		-> /usr/local/sbin
+   │     ├──libraries		-> /usr/local/lib
+   │     ├──multilibraries	-> /usr/local/libmulti
+   │     ├──execlibraries	-> /usr/local/libexec
+   │     ├──headers		-> /usr/local/include
+   │     ├──source		-> /usr/local/src
+   │     ├──resources		-> /usr/local/share
+   │     ├──games		-> /var/local/games
+   │     └──runtime
+   │        ├──locks		-> /var/local/lock
+   │        └──state		-> /var/local/lib
+   │
+   └──users
+      ├──private		-> /home
+      └──public
+         ├──shared		-> /share
+         ├──administrated	-> /info
+         └──mounted		-> /media
 
