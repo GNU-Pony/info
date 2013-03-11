@@ -11,6 +11,11 @@ be moved to either core, extra, more or limbo when tested.
 `limbo` exists for all categories and are packages that
 have for whatever reason been removed.
 
+`core` packages can only depend on other `core` packages,
+`extra` packages can only depend on `core` and `extra` packages,
+and `more` packages can only depend on `core`, `extra` and
+`more` packages.
+
 
 
 :: Accessibility packages
