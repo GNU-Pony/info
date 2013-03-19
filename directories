@@ -91,6 +91,7 @@ $docdir			/usr/doc
 $sysbindir		/bin
 $ssysbindir		/sbin
 $optdir			/opt
+$vardir                 /var
 $cachedir		/var/cache
 $spooldir		/var/spool
 $logdir			/var/log
