@@ -1,0 +1,24 @@
+For Spike I have choosen the language Python.
+
+The reason for this is that Python is both simpler and easier to find good documentation
+for than BASH, although there are languages, such as Java, that has better documentation.
+
+The code written in Python is also in general small and it does not the be compiled, which
+is important to reduce the size of the downloaded repositories, the latter should also improve
+the overall speed as compiling takes long time (although not too long if you do not compile to
+machine code) and packages are heavy duty and are not interpreted to often.
+
+Selecting a cross-platform language is also preferable as it increases the portability,
+and Python is cross-platform while supporting platform specific functions.
+
+However if Python breaks backwards compatibilty (change the specifications for a function
+or changes the syntax as they did when making Python 3) we have 3 options: rewrite all
+scrolls, execute different version of Python depending on the version the scroll was written
+in, and do not use the newer version. With languages such as BASH and Java this does not
+happen*.
+
+
+* Java may change implementation details (such as swithing between using a stabil and
+unstabile sorting algorithm), can change the behaviour of programs, but that rarely
+happens and can easily be circumvented.
+
