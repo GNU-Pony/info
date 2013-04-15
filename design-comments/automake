@@ -1,0 +1,11 @@
+To spike scroll will install the command automake,
+rather, if you really want it, you need to create
+it in /usr/local/bin.
+
+The reason for not having the automake command is
+that it breaks compatability between versions and
+it is better to have one command for each version
+that needs to be used explicity so you always new
+which version you are using and scrolls do not need
+to be updated because it uses the command automake.
+
