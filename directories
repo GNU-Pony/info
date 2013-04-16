@@ -81,15 +81,15 @@
 
 
 $bindir			/usr/bin
-$sbindir		/usr/sbin
+$sysbindir		/usr/sbin
 $libdir			/usr/lib
 $multilibdir		/usr/libmulti
 $libexecdir		/usr/libexec
 $gamedir		/usr/bin
 $datadir		/usr/share
 $docdir			/usr/doc
-$sysbindir		/bin
-$ssysbindir		/sbin
+$ebindir		/bin
+$esysbindir		/sbin
 $optdir			/opt
 $vardir                 /var
 $cachedir		/var/cache
