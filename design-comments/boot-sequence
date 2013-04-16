@@ -1,0 +1,21 @@
+While systemd is great project it is known to be problematic for
+some computers, therefore I have choosen the tried and true sysvinit
+with rc scripts written in bash, which is also in my opinion a
+easier technology.
+
+In addition to just using initscripts from Arch Linux, I have made
+modification to make it easier to set up multihoming and runlevel
+dependent daemons, but I have also changed the runlevel definitions
+by adding definitions to runlevel 2 and 4:
+
+    0     Shutdown
+    1(S)  Single-user (system maintainance)
+    2     Networkless single-user
+    3     Multi-user (regular boot with console, which can start graphics)
+    4     Networkless multi-user
+    5     Multi-user with display manager (regular boot with graphics)
+    6     Reboot
+
+But the first step in the boot is the MBR and bootloader, for which I
+have choosen SYSLINUX, because, frankly, I abhor GRUB.
+
