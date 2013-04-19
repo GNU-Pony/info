@@ -7,8 +7,8 @@
 │  └──/etc/opt				Configuration files for /opt/
 ├──/home				User directories
 ├──/info				Administrated shared files
-├──/lib   -> /usr/lib			Essential shared libraries and kernel modules
-├──/lib64 -> /usr/lib			(x86_64 only)
+├──/lib					Essential shared libraries and kernel modules, also acts as /libexec
+├──/lib64 -> /lib			(x86_64 only)
 ├──/lost+found				Filesystem-specific recoverable data
 ├──/media				Mount points for removable media
 ├──/mnt					Temporary mount points
@@ -25,8 +25,8 @@
 │  ├──/usr/bin				Binaries
 │  ├──/usr/games -> /usr/bin		Game binaries
 │  ├──/usr/doc				Non-info, non-man documentation
-│  ├──/usr/lib				Libraries for the binaries in /usr/bin/ and /usr/sbin/
-│  ├──/usr/lib64 -> /usr/lib		(x86_64 only)
+│  ├──/usr/lib -> /lib			Libraries for the binaries in /usr/bin/ and /usr/sbin/
+│  ├──/usr/lib64 -> /lib		(x86_64 only)
 │  ├──/usr/libexec			Library commands
 │  ├──/usr/libmulti			Multilib libraries
 │  ├──/usr/include			Library headers
@@ -49,15 +49,15 @@
 │     ├──/usr/local/lib
 │     ├──/usr/local/libexec
 │     ├──/usr/local/libmulti
-│     ├──/usr/local/man			-> /usr/share/man
-│     ├──/usr/local/info		-> /usr/share/info
+│     ├──/usr/local/man			-> /usr/local/share/man
+│     ├──/usr/local/info		-> /usr/local/share/info
 │     ├──/usr/local/sbin
 │     ├──/usr/local/share
 │     │  ├──/usr/local/share/changelog
 │     │  ├──/usr/local/share/doc	-> /usr/local/doc
-│     │  └──/usr/local/share/info	-> /usr/share/info
-│     ├──/usr/local/share/licenses
-│     │  └──/usr/local/share/man	-> /usr/share/man
+│     │  ├──/usr/local/share/info
+│     │  ├──/usr/local/share/licenses
+│     │  └──/usr/local/share/man
 │     └──/usr/local/src
 └──/var					Variable files
    ├──/var/cache			Removeable cache
@@ -82,7 +82,7 @@
 
 $bindir			/usr/bin
 $sysbindir		/usr/sbin
-$libdir			/usr/lib
+$libdir			/lib
 $multilibdir		/usr/libmulti
 $libexecdir		/usr/libexec
 $gamedir		/usr/bin
@@ -116,12 +116,12 @@ in .hidden files [not like gobohide] and add:
    │  ├──essentials
    │  │  ├──maintainance	-> $sysbindir
    │  │  ├──system		-> $ssysbindir
-   │  │  ├──libraries		-> /lib
-   │  │  └──libraries64		-> /lib64  {if /lib64 ≠ /lib and /lib64 exists}
+   │  │  ├──libraries		-> $libdir
+   │  │  └──libraries64		-> ${libdir}64  {if ${libdir}64 ≠ $libdir and ${libdir}64 exists}
    │  ├──applications
    │  │  ├──commands		-> $sbindir
-   │  │  ├──libraries		-> $libdir
-   │  │  ├──libraries64		-> ${libdir}64  {if ${libdir}64 ≠ $libdir and ${libdir}64 exists}
+   │  │  ├──libraries		-> /lib
+   │  │  ├──libraries64		-> /lib64  {if /lib64 ≠ /lib and /lib64 exists}
    │  │  ├──multilibraries	-> $multilibdir
    │  │  ├──execlibraries	-> $libexecdir
    │  │  ├──headers		-> /usr/include
