@@ -19,3 +19,15 @@ list an work on some ‘ponify’ or ‘suggest’ maked subproject.
 Even if this project does not succeed, those would not have
 been in vain, they can easily be used on any distro.
 
+
+To get started you will need to clone three repostories,
+the downloaded directories should be placed in the same
+superdirectory:
+
+git clone git://github.com/GNU-Pony/live-medium.git
+git clone git://github.com/GNU-Pony/initram.git
+git clone git://github.com/GNU-Pony/spike.git
+
+Then, `cd` into `live-medium`, read the readme and
+execute `make` accordingly.
+
