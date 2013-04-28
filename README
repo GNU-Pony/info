@@ -1,15 +1,18 @@
-OS type:              GNU/Linux
-Based on:             Independent
-Inspired by:          Arch Linux, Gentoo Linux, Source Mage GNU/Linux
-Origin:               Sweden
-Architectures:        -
-Desktops:             -
-Category:             Desktop, server, from source
-User target:          MLP-fans
-Experience level:     Intermidiate and experts
-Development status:   Active, pre-alpha
-Development version:  0.0 “ponyhoof”
-Development start:    13 december 2012, 22 something
+Name:                    GNU/Pony
+English pronunciation:   /'ɡnˈuː pˈəʊnɪ/  (IPA)
+Swedish pronunciation:   /'ɡnˈ̟̟ʉːˌpˈəʊnɪ/  (IPA) [Pony is pronounced in English]
+OS type:                 GNU/Linux
+Based on:                Independent
+Inspired by:             Arch Linux, Gentoo Linux, Source Mage GNU/Linux
+Origin:                  Sweden
+Architectures:           -
+Desktops:                -
+Category:                Desktop, server, from source
+User target:             MLP-fans
+Experience level:        Intermidiate and experts
+Development status:      Active, pre-alpha
+Development version:     0.0 “ponyhoof”
+Development start:       13 december 2012, 22 something
 
 
 This is a from the scratch, large scale, project, I have
