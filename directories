@@ -115,11 +115,12 @@ in .hidden files [not like gobohide] and add:
    ├──system
    │  ├──essentials
    │  │  ├──maintainance	-> $sysbindir
-   │  │  ├──system		-> $ssysbindir
+   │  │  ├──system		-> $esysbindir
    │  │  ├──libraries		-> $libdir
    │  │  └──libraries64		-> ${libdir}64  {if ${libdir}64 ≠ $libdir and ${libdir}64 exists}
    │  ├──applications
-   │  │  ├──commands		-> $sbindir
+   │  │  ├──commands		-> $bindir
+   │  │  ├──system		-> $ebindir
    │  │  ├──libraries		-> /lib
    │  │  ├──libraries64		-> /lib64  {if /lib64 ≠ /lib and /lib64 exists}
    │  │  ├──multilibraries	-> $multilibdir
