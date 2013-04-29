@@ -1,7 +1,7 @@
 Name:                    GNU/Pony
-English pronunciation:   /'ɡnˈuː pˈəʊnɪ/  (IPA)
-Swedish pronunciation:   /'ɡnˈ̟̟ʉːˌpˈəʊnɪ/  (IPA) [Pony is pronounced in English]
-Swedish pronunciation:   /'ɡnˈ̟̟ʉːˌpˈʊnyː/  (IPA) [Strictly Swedish alternative]
+English pronunciation:   /ˈɡnˈuː pˈəʊnɪ/
+Swedish pronunciation:   /ˈɡnˈ̟̟ʉːˌpˈəʊnɪ/  [Pony is pronounced in English]
+Swedish pronunciation:   /ˈɡnˈ̟̟ʉːˌpˈʊnyː/  [Strictly Swedish alternative]
 OS type:                 GNU/Linux
 Based on:                Independent
 Inspired by:             Arch Linux, Gentoo Linux, Source Mage GNU/Linux
@@ -14,6 +14,9 @@ Experience level:        Intermidiate and experts
 Development status:      Active, pre-alpha
 Development version:     0.0 “ponyhoof”
 Development start:       13 december 2012, 22 something
+
+(Pronunciation are in IPA, and by look incorrect, if not
+using perfect font, for example 'fixed' in the terminal.)
 
 
 This is a from the scratch, large scale, project, I have
