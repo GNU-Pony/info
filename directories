@@ -12,7 +12,7 @@
 ├──/lost+found				Filesystem-specific recoverable data
 ├──/media				Mount points for removable media
 ├──/mnt					Temporary mount points
-├──/opt					Self contained packages, add-on packages, and compat pacakges
+├──/opt					Self contained packages, add-on packages, and compat packages
 ├──/proc				Process information
 ├──/root				Administrator directory
 ├──/run					State information
