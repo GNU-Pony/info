@@ -24,7 +24,7 @@
 ├──/usr					Shareable, read-only data
 │  ├──/usr/bin				Binaries
 │  ├──/usr/games -> /usr		Game binaries and data
-│  ├──/usr/doc				Non-info, non-man documentation
+│  ├──/usr/doc	    			-> /usr/share/doc
 │  ├──/usr/lib -> /lib			Libraries for the binaries in /usr/bin/ and /usr/sbin/
 │  ├──/usr/lib64 -> /lib		(x86_64 only)
 │  ├──/usr/libexec			Library commands
@@ -34,7 +34,7 @@
 │  ├──/usr/share			Architecture independent data
 │  │  ├──/usr/share/changelogs		Change logs for packages
 │  │  ├──/usr/share/dict		Word lists
-│  │  ├──/usr/share/doc			-> /usr/doc
+│  │  ├──/usr/share/doc			Non-info, non-man documentation
 │  │  ├──/usr/share/info		Info manuals
 │  │  ├──/usr/share/licenses		Licences for packages
 │  │  ├──/usr/share/man			Manpage manuals
@@ -42,7 +42,7 @@
 │  ├──/usr/src				Source code
 │  └──/usr/local			Local hierarchy
 │     ├──/usr/local/bin
-│     ├──/usr/local/doc
+│     ├──/usr/local/doc			-> /usr/local/share/doc
 │     ├──/usr/local/etc
 │     ├──/usr/local/games		-> /usr/local
 │     ├──/usr/local/include
@@ -54,7 +54,7 @@
 │     ├──/usr/local/sbin
 │     ├──/usr/local/share
 │     │  ├──/usr/local/share/changelog
-│     │  ├──/usr/local/share/doc	-> /usr/local/doc
+│     │  ├──/usr/local/share/doc	Non-info, non-man documentation
 │     │  ├──/usr/local/share/info
 │     │  ├──/usr/local/share/licenses
 │     │  └──/usr/local/share/man
