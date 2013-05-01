@@ -23,7 +23,7 @@
 ├──/tmp					Temporary files
 ├──/usr					Shareable, read-only data
 │  ├──/usr/bin				Binaries
-│  ├──/usr/games -> /usr/bin		Game binaries
+│  ├──/usr/games -> /usr		Game binaries and data
 │  ├──/usr/doc				Non-info, non-man documentation
 │  ├──/usr/lib -> /lib			Libraries for the binaries in /usr/bin/ and /usr/sbin/
 │  ├──/usr/lib64 -> /lib		(x86_64 only)
@@ -44,7 +44,7 @@
 │     ├──/usr/local/bin
 │     ├──/usr/local/doc
 │     ├──/usr/local/etc
-│     ├──/usr/local/games		-> /usr/local/bin
+│     ├──/usr/local/games		-> /usr/local
 │     ├──/usr/local/include
 │     ├──/usr/local/lib
 │     ├──/usr/local/libexec
@@ -157,7 +157,7 @@ in .hidden files [not like gobohide] and add:
    │
    ├──applications
    │  ├──commands		-> $bindir
-   │  ├──games			-> $gamedir  {if $bindir ≠ $gamedir}
+   │  ├──games			-> $gamedir  {if /usr ≠ $gamedir}
    │  ├──documentations		-> $docdir
    │  ├──licenses		-> $datadir/licenses
    │  ├──changelogs		-> $datadir/changelog
@@ -171,7 +171,7 @@ in .hidden files [not like gobohide] and add:
    │  ├──service		-> $srvdir
    │  ├──applications
    │  │  ├──commands		-> /usr/local/bin
-   │  │  ├──games		-> /usr/local/games  {if /usr/local/games ≠ /usr/local/bin}
+   │  │  ├──games		-> /usr/local/games  {if /usr/local ≠ /usr/local/games}
    │  │  ├──documentations	-> /usr/local/doc
    │  │  ├──licenses		-> /usr/local/share/licenses
    │  │  └──changelogs		-> /usr/local/share/changelog
