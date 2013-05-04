@@ -114,7 +114,7 @@ in .hidden files [not like gobohide] and add:
 └──localhost
    ├──system
    │  ├──essentials
-   │  │  ├──maintainance	-> $sysbindir
+   │  │  ├──maintenance		-> $sysbindir
    │  │  ├──system		-> $esysbindir
    │  │  ├──libraries		-> $libdir
    │  │  └──libraries64		-> ${libdir}64  {if ${libdir}64 ≠ $libdir and ${libdir}64 exists}
