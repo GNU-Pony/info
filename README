@@ -57,9 +57,9 @@ It is what you make it, but can Sparkle help you.
 Free software only (when the kernel has been switched
 to Linux-libre.)
 
-Minimalistik and simplistic (from developers point of view.)
+Minimalistic and simplistic (from developers point of view.)
 
-No CD, you built your live USB-medium but can choose
+No install CD, you built your live USB-medium but can choose
 to make changes so that is can be used for anything else.
 You can even work without a storage device, just remove
 your swap parition and build the live medium to it
