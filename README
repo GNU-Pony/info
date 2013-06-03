@@ -38,3 +38,35 @@ git clone git://github.com/GNU-Pony/spike.git
 Then, `cd` into `live-medium`, read the readme and
 execute `make` accordingly.
 
+
+
+---------- Distribution highlights ----------
+
+
+Rooling relase (planned), for bleeding edge software.
+
+The official package repositories are community operated.
+
+Package manager built on top of git at builds packages
+from souce and lets you do modification the a packages
+once and the modification will be preserved with newer
+versions of the package.
+
+It is what you make it, but can Sparkle help you.
+
+Free software only (when the kernel has been switched
+to Linux-libre.)
+
+Minimalistik and simplistic (from developers point of view.)
+
+No CD, you built your live USB-medium but can choose
+to make changes so that is can be used for anything else.
+You can even work without a storage device, just remove
+your swap parition and build the live medium to it
+instread of a USB and boot it instead.
+
+Well documented: all distribution specific packages
+are documented with texinfo (not man), and configuration
+files include much of the documentation directly where it
+is needed.
+
