@@ -6,7 +6,7 @@ OS type:                 GNU/Linux
 Based on:                Independent
 Inspired by:             Arch Linux, Gentoo Linux, Source Mage GNU/Linux
 Origin:                  Sweden
-Architectures:           -
+Architectures:           Those GNU/Linux supports, built from source
 Desktops:                -
 Category:                Desktop, server, from source
 User target:             MLP-fans
