@@ -18,7 +18,7 @@ in, and do not use the newer version. With languages such as BASH and Java this 
 happen*.
 
 
-* Java may change implementation details (such as swithing between using a stabil and
-unstabile sorting algorithm), can change the behaviour of programs, but that rarely
+* Java may change implementation details (such as swithing between using a stable and
+unstable sorting algorithm), can change the behaviour of programs, but that rarely
 happens and can easily be circumvented.
 
