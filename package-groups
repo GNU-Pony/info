@@ -18,7 +18,7 @@ and `more` packages can only depend on `core`, `extra` and
 
 
 
-:: Accessibility packages
+:: accessibility packages
 extra/accessibility
 more/accessibility
 
