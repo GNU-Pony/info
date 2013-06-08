@@ -12,7 +12,7 @@ Key file:  maandree.asc
            Key size:      4096 bits
            Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
            ID:            C2D65CA7
-	   Armoured:	  yes
+           Armoured:      yes
 
            Passphrase was generated using atleast 40 characters,
            6 words (both significantly exceeded). And has been
