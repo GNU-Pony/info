@@ -1,0 +1,30 @@
+OpenPGP keys used for signing commits to the Spike package repositories.
+
+
+Key file:  maandree.asc
+
+           GitHub user:   maandree
+           Real name:     Mattias Andrée
+           Comment:       spike-repositories
+           E-mail:        maandree@member.fsf.org
+           Expires:       Tue 07 Jun 2016 02:41:08 UTC
+           Key type:      RSA, signing only
+           Key size:      4096 bits
+           Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
+           ID:            C2D65CA7
+	   Armoured:	  yes
+
+           Passphrase was generated using atleast 40 characters,
+           6 words (both significantly exceeded). And has been
+           modified to include more than spaces and lower case.
+           The word list included 27988 words of multiple languages
+           and not only ASCII. The passphrase is random (using
+           /dev/random), was only generated once, and does not
+           for in whole or in part a grammatically acceptable
+           sentence. GPG did not have any complaints on the
+           passphrase. The passphrase has not been stored on
+           the computer or on-line, and after one week (I normal
+           just have one day, but this passphrase is far more
+           complex) of use I will burn the note no which it is
+           written.
+
