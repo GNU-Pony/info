@@ -32,6 +32,7 @@ extra/candy
 more/candy
 
 :: database packages
+core/database
 extra/database
 more/database
 
