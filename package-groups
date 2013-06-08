@@ -44,7 +44,7 @@ core/devel
 extra/devel
 more/devel
 
-:: file systems, partations, hard disc and other storages
+:: filesystems, partations, hard disc and other storages
 core/disc
 extra/disc
 more/disc
