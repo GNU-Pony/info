@@ -2,7 +2,7 @@ core	Essential packages     (high priority support)
 extra	Recommended packages (medium priority support)
 more	Additional packages     (low priority support)
 limbo   Dead packages                     (no support)
-spool   Spooled pacakges
+spool   Spooled packages
 
 `spool` exists for all categories and are generated or
 contributed packages that has not been tested and will
