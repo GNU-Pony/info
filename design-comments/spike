@@ -17,6 +17,11 @@ scrolls, execute different version of Python depending on the version the scroll
 in, and do not use the newer version. With languages such as BASH and Java this does not
 happen*.
 
+Spike has its own implementation of database rather than using for example SQLite because we
+must be able to trust that the files do only change when the database's content change. The
+file must not change on for example optimisation because we want the do git commits on changes
+and no nothing modified between commits.
+
 
 * Java may change implementation details (such as swithing between using a stable and
 unstable sorting algorithm), can change the behaviour of programs, but that rarely
