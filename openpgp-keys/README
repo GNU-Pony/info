@@ -11,7 +11,7 @@ Key file:  maandree.asc
            Key type:      RSA, signing only
            Key size:      4096 bits
            Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
-	   Fingerprint:   8687 485B 05E0 37E3 3019  4A32 2975 0DEE C2D6 5CA7
+           Fingerprint:   8687 485B 05E0 37E3 3019  4A32 2975 0DEE C2D6 5CA7
            ID:            C2D65CA7
            Armoured:      yes
 
@@ -44,7 +44,7 @@ Key file:  security-1.asc
            Key type:      RSA, signing only
            Key size:      4096 bits
            Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
-	   Fingerprint:   4BA6 0E69 9AD3 DE4E C5AD  9504 5933 B931 A1B4 130D
+           Fingerprint:   4BA6 0E69 9AD3 DE4E C5AD  9504 5933 B931 A1B4 130D
            ID:            A1B4130D
            Armoured:      yes
 
@@ -59,7 +59,7 @@ Key file:  security-2.asc
            Key type:      RSA, signing only
            Key size:      4096 bits
            Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
-	   Fingerprint:   A1D1 E5B6 C9B1 3235 7A94  C8C6 8571 8AED F145 50AC
+           Fingerprint:   A1D1 E5B6 C9B1 3235 7A94  C8C6 8571 8AED F145 50AC
            ID:            F14550AC
            Armoured:      yes
 
