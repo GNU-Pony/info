@@ -7,7 +7,7 @@ Key file:  maandree.asc
            Real name:     Mattias Andrée
            Comment:       spike-repositories
            E-mail:        maandree@member.fsf.org
-           Expires:       Jun 2016-(05)-07
+           Expires:       2016-(06)Jun-07
            Key type:      RSA, signing only
            Key size:      4096 bits
            Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
@@ -40,7 +40,7 @@ Key file:  security-1.asc
            Real name:     Mattias Andrée
            Comment:       security-1
            E-mail:        maandree@member.fsf.org
-           Expires:       2018-06-12
+           Expires:       2018-(06)Jun-12
            Key type:      RSA, signing only
            Key size:      4096 bits
            Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
@@ -55,7 +55,7 @@ Key file:  security-2.asc
            Real name:     Mattias Andrée
            Comment:       security-2
            E-mail:        maandree@member.fsf.org
-           Expires:       2018-06-12
+           Expires:       2018-(06)Jun-12
            Key type:      RSA, signing only
            Key size:      4096 bits
            Created with:  GNU Privacy Guard 2.0.20, libgcrypt 1.5.2
