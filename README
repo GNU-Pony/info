@@ -1,7 +1,7 @@
 Name:                    GNU/Pony
 English pronunciation:   /ˈɡnˈuː pˈəʊnɪ/
 Swedish pronunciation:   /ˈɡnˈ̟̟ʉːˌpˈəʊnɪ/  [Pony is pronounced in English]
-Swedish pronunciation:   /ˈɡnˈ̟̟ʉːˌpˈʊnːyː/  [Strictly Swedish alternative]
+Swedish pronunciation:   /ˈɡnˈ̟̟ʉːˌpˈʊnːyː/  [Strictly Swedish alternative]*
 OS type:                 GNU/Linux
 Based on:                Independent
 Inspired by:             Arch Linux, Gentoo Linux, Source Mage GNU/Linux
@@ -37,6 +37,9 @@ git clone git://github.com/GNU-Pony/spike.git
 
 Then, `cd` into `live-medium`, read the readme and
 execute `make` accordingly.
+
+
+* I believe there are dialects where the gemination is missing.
 
 
 
