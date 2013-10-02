@@ -1,0 +1,19 @@
+Programs that will never break backwards compatibility
+or must never break backwards compatibility (notifications
+will be published in good time before that happens) just
+have timestamp of the time a issued the `git tag -a` command
+in posix time format rounded down to nearest second. The
+difference of two timestamps can be used to guess how large
+the changeset of the update is.
+
+Other programs' versions are formated as MAJOR.MINOR and
+MAJOR.MINOR.PATCH where PATCH > 0. MAJOR is zero one
+all versions before the first version that is considered
+stable (which will be 1.0), and is increased only on
+breakage of backwards incompatability. MINOR and PATCH
+is reset to zero when MAJOR and MAJOR or MINOR,
+respectively is increased. MINOR is increased on
+regular updates, PATCH is increased for minor changes
+that fixes a small release mistake or minor bug
+that broke backwards incompatability.
+
