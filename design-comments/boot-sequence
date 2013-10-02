@@ -1,7 +1,10 @@
 While systemd is great project it is known to be problematic for
-some computers, therefore I have choosen the tried and true sysvinit
-with rc scripts written in bash, which is also in my opinion a
-easier technology.
+some computers and has been criticised for being too much black
+magic (i.e. not transparent enough), therefore I have choosen the
+tried and true sysvinit with rc scripts written in bash, which is
+also in my opinion a easier technology. Additionally systemd has
+lately been criticised for including features that should not
+have anything to do with systemd and that may even be harmful.
 
 In addition to just using initscripts from Arch Linux, I have made
 modification to make it easier to set up multihoming and runlevel
