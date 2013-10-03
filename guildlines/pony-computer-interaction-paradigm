@@ -27,3 +27,6 @@ in the foreground. You get in, you get out.
 Pipeable means that the program can be used as a
 part of a Unix pipline.
 
+Additionally programs should not save there state
+unless explicitly told to do so.
+
