@@ -1,0 +1,18 @@
+Programs should be signed to be as small, functionwise,
+as possible. This reduces the size of the code, the number
+of bugs, and the complexity of program. And often, the
+memory usage of the program, which unused RAM is wasted
+RAM, wasted RAM is still wasted RAM.
+
+Programs should however be signed to be customisable and
+extensible. The simplest way to do this is to break
+the code into as many functions as possible, and allow
+those fucntions to be replaced, and extended (with union
+function constructs.) If you use Python, just executing
+a dot will do as all functions actually modifiable
+variables. For shell scripts, you can do the same thing,
+but you will need a variable with the name of the function,
+so that each extension can define a function the uses
+the already existing function and tell the program which
+function is the new function.
+
