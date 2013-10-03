@@ -1,0 +1,57 @@
+It is important the documentation is typographically
+correct. This entails using typographical Unicode
+characters rather than ASCII.
+
+
+Emdash:
+	X11: <compose> - - -
+	Texinfo: ---
+
+Endash:
+	X11: <compose> - - .
+	(Texinfo: --)
+
+Hyphen:
+	Not surrounded by whitespace
+	Any keyboard: -
+
+Minus:
+	X11: Keypad − assuming with Unicode math operatrs
+
+Ellipsis:
+	X11: <compose> . .
+	Do not use ... in Texinfo, use the UCS gryph.
+
+Single quotes:
+	‘
+	  X11: <alt-gr><shift>v
+	  X11: <compose> < '
+	  Texinfo: `
+	’
+	  X11: <alt-gr><shift>b
+	  X11: <compose> > '
+	  Texinfo: '
+
+Double quotes:
+	“
+	  X11: <alt-gr>v
+	  X11: <compose> < "
+	  Texinfo: ``
+	”
+	  X11: <alt-gr>b
+	  X11: <compose> > "
+	  Texinfo: ''
+
+
+
+Glyphs used in source code:
+
+Shy hyphen:
+	X11: <compose> - - <space>
+	Texinfo: @-
+	Printed with red in Emacs
+
+No breaking space: (by be used in source code)
+	X11: <alt-gr><shift><space>
+	Printed with magenta in Emacs
+
