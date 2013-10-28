@@ -58,16 +58,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="108.54701"
-     inkscape:cy="267.2911"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="208.53535"
+     inkscape:cy="61.4647"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1792"
-     inkscape:window-height="659"
+     inkscape:window-width="896"
+     inkscape:window-height="1282"
      inkscape:window-x="1792"
-     inkscape:window-y="12"
+     inkscape:window-y="38"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -77,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -300,7 +300,9 @@
          id="flowPara3645"
          style="font-size:100px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#2e7ed9;fill-opacity:1;font-family:Celestia Redux Alternate;-inkscape-font-specification:Celestia Redux Alternate Medium">GNU<flowSpan
    style="fill:#cf7ed9;fill-opacity:1"
-   id="flowSpan4443">/Pony</flowSpan></flowPara></flowRoot>    <g
+   id="flowSpan4443"><flowSpan
+   style="fill:#2e7ed9;fill-opacity:1"
+   id="flowSpan3811">/</flowSpan>Pony</flowSpan></flowPara></flowRoot>    <g
        id="g3922"
        transform="translate(-84.631085,-109.26782)">
       <path
