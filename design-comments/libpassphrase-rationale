@@ -1,0 +1,20 @@
+In my first year at the university the computer
+rooms hade Solaris thin clients and the graphical
+login manager had echoing disabled when the user
+entered the passphrase. This confused new students
+that hade to be told that the passphrase feild is
+supposted to be blank while you are filling it.
+
+Today on GNU machines this is rather uncommon in
+graphical programs, but there are still places
+this occurs in, namely in terminal programs, and
+new users will use some of them.
+
+libpassphrase allows you to choose to make terminal
+programs' passphrase fields behave like those of
+graphical programs. But it also allows you to disable
+things you do not care about. Or to rewrite it
+completely if it cannot do what you want it to do,
+and all programs that takes advantage of libpassphrase
+will use your implementation.
+
