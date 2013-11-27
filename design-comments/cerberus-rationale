@@ -1,0 +1,6 @@
+The goal of cerberus is to provide an easily hackable
+login replacement that does not force you do use things
+you might not care about. For example, you might not
+need PAM or even passphrase verification. I also uses
+libpassphrase (see libpassphrase-reationale.)
+
