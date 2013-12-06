@@ -19,17 +19,29 @@ Development start:       13 december 2012, 22:something
 using perfect font, for example ‘fixed’ in the terminal.)
 
 
-This is a from the scratch, large scale, project, I have
-other project to work on to, so this will take a while. If
-you want to help, I suggest taking a look into the issue
+This is a from scratch, large scale, project, I have other
+project to work on to, so this will take a while. If you
+want to help, I suggest taking a look into the issue
 list an work on some ‘ponify’ or ‘suggest’ maked subproject.
 Even if this project does not succeed, those would not have
 been in vain, they can easily be used on any distro.
 
+If you want to contact me with any questions you do not
+think is fitted for the issue system in this [info] repository,
+the absolutely best way to contact me is by e-mailing me
+at debase64(bWFhbmRyZWUK)@member.fsf.org. I will see that
+e-mail the next second I am at a computer (with Internet
+connection). I [maandree] can also be contacted over reddit
+but it can sometimes take a few days. I do not mind if you
+call me over the telephone or send an SMS*, but chances are
+that I will not notice it but for a weak or so. (* I only
+have a mobile phone but I use it as if it as a landline
+telephone.) Those are the only five feasible ways to contact me.
+
 
 To get started you will need to clone three repostories,
 the downloaded directories should be placed in the same
-superdirectory:
+parent directory:
 
 git clone git://github.com/GNU-Pony/live-medium.git
 git clone git://github.com/GNU-Pony/initram.git
@@ -46,18 +58,18 @@ execute `make` accordingly.
 ---------- Distribution highlights ----------
 
 
-Rolling relase (planned), for bleeding edge software.
+Rolling release (planned), for bleeding edge software.
 
 The official package repositories are community operated.
 
 Package manager built on top of git at builds packages
-from souce and lets you do modification the a packages
-once and the modification will be preserved with newer
-versions of the package.
+from source and lets you do modifications to packages
+once and the modifications will be preserved with newer
+versions of the packages.
 
 It is what you make it, but Sparkle can help you.
 
-Free software only (when the kernel has been switched
+Free Software only (when the kernel has been switched
 to Linux-libre,) with opt-in support for community provided
 non-free software.
 
@@ -67,7 +79,7 @@ No install CD, you built your live USB-medium but can choose
 to make changes so that is can be used for anything else.
 You can even work without a storage device, just remove
 your swap parition and build the live medium to it
-instread of a USB and boot it instead.
+instead of a USB and boot it instead.
 
 Well documented: all distribution specific packages
 are documented with texinfo (not man), and configuration
