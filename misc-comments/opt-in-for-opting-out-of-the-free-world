@@ -1,0 +1,33 @@
+Software freedom is very important for me,
+despite this the package manager, Spike, is
+lets you opt-in for proprietary software.
+This is not too common among GNU/Linux
+distributions, they either do not care about
+user freedom, or are enforces freedom.
+The only exception I know of this is Parabola
+GNU/Linux where you have to remove your-freedom
+(a package conflict with proprietary packages
+available in Arch Linux) before you can
+install proprietary packages. The problem
+in Parabola is that it uses AUR without
+restrictions. In GNU/Linux you have to
+configure what restrictions Spike buts on
+packages to install or even find them.
+
+Only allowing free packages is naïve.
+If try to convert a pony, schooled into
+using a proprietary system that very
+different from GNU/Linux (such as Windows),
+into using GNU/Linux, she will run back,
+“her” proprietary system and never let
+go, if you do not do this in a long
+transitional phase. Letting transitioners
+using proprietary packages is not to
+take their freedom way, it is to not
+give it in its entirety as fast, which
+is quite different. But you still tell
+them that they should only use it
+temporarly and transition away from them
+when they fill comfortable with the new
+system.
+
