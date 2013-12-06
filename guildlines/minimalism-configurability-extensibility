@@ -1,18 +1,23 @@
-Programs should be signed to be as small, functionwise,
+Programs should be designed to be as small, functionwise,
 as possible. This reduces the size of the code, the number
-of bugs, and the complexity of program. And often, the
+of bugs, and the complexity of the program. And often, the
 memory usage of the program, which unused RAM is wasted
 RAM, wasted RAM is still wasted RAM.
 
-Programs should however be signed to be customisable and
+Programs should however be designed to be customisable and
 extensible. The simplest way to do this is to break
 the code into as many functions as possible, and allow
-those fucntions to be replaced, and extended (with union
+those fucntions to be replaced, and extended (with onion
 function constructs.) If you use Python, just executing
-a dot will do as all functions actually modifiable
-variables. For shell scripts, you can do the same thing,
-but you will need a variable with the name of the function,
-so that each extension can define a function the uses
-the already existing function and tell the program which
-function is the new function.
+a dotfile will do as all functions are actually modifiable
+variables (with the exception for built-in definitions).
+
+For shell scripts, you can do the same thing, but you
+will need a variable whose value is the name of the function.
+This allows extension to define a new function that in it
+invokes the old function, by invoking the content of the
+variable. The variable need to be copied so the new function
+knows the old value, as the variable needs to be updated
+with the new function. You can take a look at
+gates-of-tartaros, which uses this contruct for extensibility.
 

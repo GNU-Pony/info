@@ -1,32 +1,36 @@
 If you have ever takes a course in pony–computer
-interaction, you can forget all of it, is is just
-a bounch of domain specific … specific to machines
-used by the general public without choice of system
-to interact with an commerical products aimed to
-be sold to as many users as possible, not to a
-specific target.
+interaction, you can forget all of it, it is
+(usually, but not necessarily) just a bounch of
+domain specific … specific to machines used by
+the general public without a chance of choice of
+system to interact with commerical products aimed
+to be sold to as many users as possible, not to
+a specific target.
 
 Here we have freedom and users can choose how to
 interact with their system. Choosing GNU/Pony does
 not impose on you how you interact with your system
 or even how it works, it gives you are bare default.
 
-But there is some optional application being designed
-for GNU/Pony, for these programs (naturally there are
-exceptions where this is not fully applicable do to
-the nature of those programs' type program) the
-paradigm is to be terminal and keyboard oriented
-ephemeral, and pipeable.
+But there are some optional application being
+designed for GNU/Pony. For these programs (naturally
+there are exceptions where this is not fully
+applicable do to the nature of those programs'
+type program) the paradigm is to be terminal
+and keyboard oriented, ephemeral, and pipeable.
 
-Ephemeral means that the programs runs during as short
-time as possible. The do not ask for a new input to
-run again and the do not need to be running in the
-background just to use them for a short time, seldom,
-in the foreground. You get in, you get out.
+Ephemeral means that the programs runs during as
+short time as possible. They do not ask for a new
+input to run again and they do not need to be
+running in the background just to use them for
+a short time, seldom, in the foreground.
+You get in, you get out.
 
 Pipeable means that the program can be used as a
-part of a Unix pipline.
+part of a Unix pipline. This allows you to combine
+the power of multiple program with almost unlimited
+flexibility.
 
-Additionally programs should not save there state
+Additionally programs should not save their state
 unless explicitly told to do so.
 
