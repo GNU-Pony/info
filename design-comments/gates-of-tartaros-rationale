@@ -1,25 +1,25 @@
 Before Gates of Tartaros I used agetty. But I wanted a My Little Pony
-to be displayed, to do this I forked agetty to support kmsponies from
+to be displayed. To do this I forked agetty to support kmsponies from
 ponysay and added Luna to my /etc/issue file (I also added a few more
-capabilities). The problem with this was to it was always to same pony.
+capabilities.) The problem with this was to it was always to same pony.
 
-This wasn't that great, and to top it of, the agetty code is very
+This was not that great, and to top it of, the agetty code is very
 bloated and you have to bloat it even more to add new features. Gates
-of Tartaros is just a cirka 100 line POSIX shell script program — many
-of the lines are just function and variable declarations to allow
-function onion:ings and replacements — that sources the /etc/gotrc
-file which allows you to modify and extend the entire behaviour of
-Gates of Tartaros. The only thing Gates of Tartaros does if it is not
-extended is print a small program, read the user name and starts
-either `login` or `ssh` (depending on whether it included an at-sign)
-and fixes the TTY settings.
+of Tartaros is just POSIX shell script program with cirka 100 line
+— many of the lines are just function and variable declarations to
+allow function onion:ings and replacements for extensibility — that
+sources the /etc/gotrc file which allows you to modify and extend the
+entire behaviour of Gates of Tartaros. The only thing Gates of Tartaros
+does if it is not extended is print a small prompt, read the user name
+and starts either `login` or `ssh` (depending on whether it included
+an at-sign), fixes the TTY settings, and exports the TERM variable.
 
-So may it self Gates of Tartaros just does what is really required to
-perform a login and virtual terminal, and to use SSH which is just
+So by itself Gates of Tartaros just does what is really required to
+perform a login on a virtual terminal, and to use SSH which is just
 added by default because it does not really bloat the program, and
 is very useful, at least for me. If this is not enough, you can
-choose to for example support baudrate configurations (for serial
-terminals). But back to the reason for write Gates of Tartaros in
+choose tom for example, support baudrate configurations (for serial
+terminals). But back to the reason for writing Gates of Tartaros in
 the first place, Gates of Tartaros comes with a code you can add or
 source in /etc/gotrc, optionally modified, that uses ponysay to get
 a My Little Pony that it puts in the lower left corner of the screen.
