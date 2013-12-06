@@ -1,15 +1,18 @@
-While systemd is great project it is known to be problematic for
-some computers and has been criticised for being too much black
-magic (i.e. not transparent enough), therefore I have choosen the
-tried and true sysvinit with rc scripts written in bash, which is
-also in my opinion a easier technology. Additionally systemd has
-lately been criticised for including features that should not
-have anything to do with systemd and that may even be harmful.
+The first steps in booting the system is the boot manager and
+the bootloader.  For both these steps I have choosen SYSLINUX,
+because, frankly, I abhor GRUB. Additionally GRUB is said
+(I have not checked) to not be fitted for booting installations
+mediums, something SYSLINUX is fitted for. Choosing SYSLINUX as
+the default means that the same program can be used both for
+the installation medium and an installed system, independently
+what it is stored on.
 
-In addition to just using initscripts from Arch Linux, I have made
-modification to make it easier to set up multihoming and runlevel
-dependent daemons, but I have also changed the runlevel definitions
-by adding definitions to runlevel 2 and 4:
+For the initialisation process I have choosen a system similar
+to that of Arch Linux before systemd, but improved in some
+aspects.
+
+The default runlevel is set to runlevel 3. The definied
+runlevels are:
 
     0     Shutdown
     1(S)  Single-user (system maintainance)
@@ -19,6 +22,59 @@ by adding definitions to runlevel 2 and 4:
     5     Multi-user with display manager (regular boot with graphics)
     6     Reboot
 
-But the first step in the boot is the MBR and bootloader, for which I
-have choosen SYSLINUX, because, frankly, I abhor GRUB.
+I have choosen sysvinit with rc scripts over systemd because:
+
+    systemd fails on some machine (an initial reason that I think have been fix)
+    
+    systemd uses C instead of a scripts language:
+    
+        Scripts are easier to understand, especially if you do not know any language.
+
+	C is more difficult to maintain because if its low-level nature.
+
+	     More code does not mean it is better, it general means the opposite!
+
+	C is more error-prone because if its low-level nature.
+	
+    systemd tries to solve everything itself
+    
+    systemd does things, even dangerous things, that has nothing to do with initialisation
+    
+    systemd uses more memory doing nothing more then sysvinit
+    
+    systemd thinks that the overhead of Bash is a problem:
+    
+    	systemd does executive (CPU) work and not laborer (GPU) work,
+	overhead does not matter, only time complexity does.
+
+	    Some say that OpenRC (Gentoo's alternative that uses sysvinit)
+	    is actually faster. And I do beleave them and that it is
+	    generally true.
+	
+	Only portable devices are booted often, and even then the
+	boot times not not that long. The verification of my partition
+	encryption passphrases are longer.
+	
+    Everything should be in plain UTF-8, systemd logs are in binary
+    
+    systemd thinks there is some huge dependency hell between daemons,
+    there is not. Basically only the display manager needs to be started
+    after it prerequisites, everthing else can be started in parallel.
+    
+    systemd combines mechanism and policy.
+        (Be aware that the authors of systemd seem to ignore that
+	you choose your policy for sysvinit, when comparing them.)
+    
+    systemd uses DBus
+    
+    systemd thinks it is superior becuase it does everyting itself, it is
+    inferior because it is much harder to replace a part of it you do not like
+    
+    systemd have specific dependency without general interest
+    
+    systemd authors thinks that making systems dependent on systemd is desirable
+    
+    systemd is not portable
+    
+    Those that do not understand sysvinit are doomed to reinvent it, poorly.
 
