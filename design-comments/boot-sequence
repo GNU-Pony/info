@@ -44,7 +44,7 @@ I have choosen sysvinit with rc scripts over systemd because:
     
     systemd thinks that the overhead of Bash is a problem:
     
-    	systemd does executive (CPU) work and not laborer (GPU) work,
+    	systemd does executive (CPU) work and not labourer (GPU) work,
 	overhead does not matter, only time complexity does.
 
 	    Some say that OpenRC (Gentoo's alternative that uses sysvinit)
