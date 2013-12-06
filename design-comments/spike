@@ -61,3 +61,25 @@ git commits on changes and no nothing modified between
 commits. gdbm could be used, but it does looks like
 implementing a even more fit database is worth it.
 
+
+Common syntax caveats in shell script and commands:
+
+       -- Variable expansion without quotes is evaluating (partially):
+       x='*'
+       echo $x	  # prints all files
+       echo "$x"  # prints an asteriks
+       
+       -- Variable expansion without quotes makes multiple arguments
+       x='a b'
+       for y in $x;   do echo "$y"; done  # prints two lines
+       for y in "$x"; do echo "$y"; done  # prints one line
+       
+       -- ... or none
+       x=''
+       for y in $x;   do echo "$y"; done  # prints zero lines
+       for y in "$x"; do echo "$y"; done  # prints one line
+       
+       -- Easy to make a mistake where the file is parsed as an argument
+       dir="--temp--"
+       cp somefile "$dir"    ## --temp-- is not a recognised option
+       cp somefile -- "$dir" ## works as intended: somefile is copied into --temp--
