@@ -1,7 +1,7 @@
 It is possible to make a Spike backend extension
 that modifies Spike into performing installation
-actions concurrently, such as downloading sources
-while build another package.
+actions concurrently. For example downloading
+sources while build another package.
 
 This will however not be built into Spike because
 the advantages are far exceeded by the disadvantages.
@@ -10,37 +10,44 @@ for building; you can pass an option to make to tell
 it how many threads you want to use when building,
 i.e. how many jobs you want to do concurrently when
 compiling one package. This is implemented, but it
-is the only nonconcurrency that will be implemented.
+is the only concurrency that will be implemented.
 This makes it totally useless to compile multiple
 packages concurrently, the speed up will be minimal
 and only existing when a package cannot use all
 allowed threads at one time because it has too wait
 for a depencency within the build process or does
-not how enough to do. But building multiple packages
-would make the output unreadable by human beings,
-and more so machines, unless each process's output
-was pipe to separates terminals or files.
+not have enough to do. Compiling C or C++ is what
+will takes most time, but the task of compiling C
+code is embassingly parallel because of the header
+files. Languages like Java are not embassingly
+parallel, but the compile time is generally much
+lower. Building multiple packages would make the
+output unreadable by pony beings, and more so
+machines, unless each process's output was pipe
+to separates terminals or files.
 
 Similarly, but not as severely, output would be
 mangled if sources for other packages was downloaded
 will a packages as being built.
 
-Downloading multiple sources as concurrently would
-also mangle the output if the as not silenced, but
-downloading multiple sources at the same time does
-not give any speed as your download speed generally
-maximised even when downloading one package, especial
-if you have a slow download bandwidth. If you have
-a large or even medium download bandwidth download
-sources does not really take that much time, perhaps
-only when you are install all programs the first
-time. Otherwise you normally are not downloading
+Downloading multiple sources concurrently would
+also mangle the output if the as not silenced unless
+Spike implemented a way to only show download parse
+and otherwise not be verbose. Downloading multiple
+sources at the same time does not give any speed up
+as your download speed generally maximised even
+when downloading one package, especial if you have
+a slow download bandwidth. If you have a large or
+even medium download bandwidth download sources
+does not really take that much time, perhaps only
+when you are install your system for the first
+time: otherwise you normally are not downloading
 too much.
 
 Rather then focusing one absolutely maximising the
 performance, focus should lay on code simplicity
 and output readability. If the updates take too
-long time, distribute the workload on mutliple
-computers, perhaps even with friends, and in worst
-case use prebuilt packages.
+long time, distribute the workload on multiple
+computers, perhaps even with pony friends, and
+in worst case use prebuilt packages.
 
