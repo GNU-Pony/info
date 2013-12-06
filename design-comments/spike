@@ -1,29 +1,63 @@
-For Spike I have choosen the language Python.
+For Spike I have choosen the language Python both for Spike
+itself and for the scrolls, the reason for this is best
+expressed as an comparsion table:
 
-The reason for this is that Python is both simpler and easier to find good documentation
-for than BASH, although there are languages, such as Java, that has better documentation.
+┌───────────────────────────────────────────┬──────────────┬─────────────┬──────────────┬──────────────┬─────────────┬────────────┐
+│                                           │ Make SH=bash │ GNU Bash    │ Python 2     │ Python 3     │ Java        │ Importance │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Well documented                           │ 9            │ 9           │ 7            │ 7            │ 10          │   7        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Easily access documentation               │ 8            │ 8           │ 10           │ 10           │ 3           │   8        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Size of complex code                      │ Huge         │ Huge        │ Medium       │ Medium       │ Large       │  −9        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Size of simple code                       │ Small        │ Tiny        │ Small        │ Small        │ Large       │ −10        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Syntax burden                             │ Small        │ Tiny        │ Tiny         │ Small        │ Large       │   6        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Error-proneness                           │ 7            │ 6           │ 3            │ 3            │ 1           │  −9        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Readability                               │ 5            │ 6           │ 8            │ 8            │ 5           │   6        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Abstractability                           │ 7            │ 7           │ 9            │ 9            │ 2           │   7        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Burden of dynamically loading object code │ 2            │ 1           │ ?            │ 3            │ 6           │  −5        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Burden of extensibility                   │ Large        │ Small       │ ?            │ Tiny         │ Huge        │ −10        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Cross-platform                            │ 8            │ 8           │ 9            │ 9            │ 9           │   5        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Burden of using unix functionallity       │ Small        │ Small       │ Tiny         │ Tiny         │ Huge        │  −9        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Compile time                              │ None         │ None        │ None         │ None         │ Medium      │ −10        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Compilation parallelisability             │ Not needed   │ Not needed  │ Not needed   │ Not needed   │ Small       │   3        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Dependency load                           │ None         │ None        │ Small        │ None         │ None*       │   3        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Syntax support in GNU Emacs               │ Excellent    │ Good        │ ?            │ Great        │ Bad         │   4        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Backwards/forwards compatbility**         │ Excellent    │ Fundamental │ Not required │ Not required │ Fundamental │  10        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ How well I know it                        │ 8            │ 9           │ ?            │ 9            │ 10          │   7        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Executive performance                     │ 8            │ 8           │ 5            │ 6            │ 8           │   1        │
+├───────────────────────────────────────────┼──────────────┼─────────────┼──────────────┼──────────────┼─────────────┼────────────┤
+│ Labourer performance                      │ 1            │ 2           │ 3            │ 4            │ 10          │   0,5      │
+└───────────────────────────────────────────┴──────────────┴─────────────┴──────────────┴──────────────┴─────────────┴────────────┘
+* Medium, if it was not for it is standard in GNU/Pony already
+** Fundamental means that it will/must never break
 
-The code written in Python is also in general small and it does not the be compiled, which
-is important to reduce the size of the downloaded repositories, the latter should also improve
-the overall speed as compiling takes long time (although not too long if you do not compile to
-machine code) and packages are heavy duty and are not interpreted to often.
+Languages not in this table are either, fundamentally
+not appropriate for this task, not understood by me,
+or not know by enough ponies.
 
-Selecting a cross-platform language is also preferable as it increases the portability,
-and Python is cross-platform while supporting platform specific functions.
-
-However if Python breaks backwards compatibilty (change the specifications for a function
-or changes the syntax as they did when making Python 3) we have 3 options: rewrite all
-scrolls, execute different version of Python depending on the version the scroll was written
-in, and do not use the newer version. With languages such as BASH and Java this does not
-happen*.
-
-Spike has its own implementation of database rather than using for example SQLite because we
-must be able to trust that the files do only change when the database's content change. The
-file must not change on for example optimisation because we want the do git commits on changes
-and no nothing modified between commits.
-
-
-* Java may change implementation details (such as swithing between using a stable and
-unstable sorting algorithm), can change the behaviour of programs, but that rarely
-happens and can easily be circumvented.
+Spike has its own implementation of database rather
+than using for example SQLite because we must be able
+to trust that the files do only change when the
+database's content change. The file must not change
+on for example optimisation because we want the do
+git commits on changes and no nothing modified between
+commits. gdbm could be used, but it does looks like
+implementing a even more fit database is worth it.
 
