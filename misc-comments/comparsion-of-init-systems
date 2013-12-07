@@ -1,0 +1,287 @@
+[--]	Does not belong here
+[linux]	Linux specific
+[dep]	Specific dependency without general interest
+*	In pony-initialisation
+
+systemd biased part from systemd website:::
+
+--- general features ---					sysvinit	startup?	systemd		(comment)
+Mandatory DBus dependency					no		yes		yes		[dep] Pointess
+Hard-to-debug monolitic startup in undocumented C		no		no		yes		Hurting feature
+Shell-free bootup						no		no		yes		Hurting feature
+Modular C coded early boot services included			no		no		yes		Hurting feature
+Read-Ahead							no    		ureadahead	yes
+Socket-based Activation						no		not parallel	yes
+Socket-based Activation: inetd compatibility			no		not parallel	yes
+Bus-based Activation						no		patch		yes
+Device-based Activation						no		no		yes
+Configuration of device dependencies with udev rules		no		no		yes
+Path-based Activation (inotify)					no	 	no		yes
+Timer-based Activation						cron/at		cron/at		reinvented [0]
+Mount handling							* yes	  	(no)??		yes
+fsck handling  	    	    					* yes	  	(no)??		yes
+Quota handling							no	  	no		yes		[--]
+Automount handling						no	  	no??		yes		[--]
+Swap handling							* yes		no??		yes
+Snapshotting of system state					no		no		yes		[--]?
+XDG_RUNTIME_DIR Support						no		no		yes		[dep] Doing what?
+Optionally kills remaining processes of users logging out	no		no		yes		[--]
+Linux Control Groups Integration				no		no		yes		[linux]
+Audit record generation for started services			no		no		yes
+SELinux integration						no		no		yes		[linux] [dep]
+PAM integration							no  		no		yes		[--]
+Encrypted hard disk handling (LUKS)				* yes		no		yes
+SSL Certificate/LUKS Password handling, including
+Plymouth, Console, wall, TTY and GNOME agents			no		no		yes		Mostly in OpenRC
+Network Loopback device handling				* ??	  	no		yes
+binfmt_misc handling						* rc.local.d	no		yes
+System-wide locale handling					* yes	 	no		yes
+Console and keyboard setup					* yes		no		yes
+Infrastructure for creating, removing, cleaning up
+of temporary and volatile files					no		no		yes		Pointless
+Handling for /proc/sys sysctl					no		no		yes		Pointless
+Plymouth integration   						no		yes		yes		[dep]
+Save/restore random seed					* yes		no		yes
+Static loading of kernel modules				* yes		no		yes		[linux]
+Automatic serial console handling				no		no		yes
+Unique Machine ID handling					no		no		yes		In OpenRC
+Dynamic host name and machine meta data handling		* yes?		no		yes		What metadata?
+Reliable termination of services				* ??		no		yes		In OpenRC
+Early boot /dev/log logging					no		no		yes		In OpenRC
+Minimal kmsg-based syslog daemon for embedded use		no		no		yes
+Respawning on service crash without losing connectivity		* ??		no		yes
+Gapless service upgrades					* ??		no		yes
+Graphical UI							no		no		yes		[--] [deps]
+Built-In Profiling and Tools					no		no		yes		[--] In OpenRC
+Instantiated services  						??		yes		yes		What is this?
+PolicyKit integration						no		no		yes		[deps]
+Remote access/Cluster support built into client tools		no		no		yes		[--]
+Can list all processes of a service 	 			no		no		yes		In OpenRC
+Can identify service of a process				no		no		yes		[--]
+Automatic per-service CPU cgroups to
+even out CPU usage between them					no		no		yes		[linux] In OpenRC
+Automatic per-user cgroups 					no		no		yes		[linux]
+SysV compatibility 						yes		yes		yes
+SysV services controllable like native services			yes		no		yes
+SysV-compatible /dev/initctl	       				yes		no		yes
+Reexecution with full serialization of state			yes		no		yes
+Interactive boot-up   		       				(no)		(no)		yes		In OpenRC
+Container support (as advanced chroot replacement)		no		no		yes		In OpenRC
+Dependency-based bootup	       					* yes		no		yes		In OpenRC
+Disabling of services without editing files			yes		no		yes
+Masking of services without editing files			no		no		yes
+Robust system shutdown within PID 1 				no		no		yes		Pointless
+Built-in kexec support 	      	  				* yes		no		yes
+Dynamic service generation					no		no		yes
+Upstream support in various other OS components			yes, * no	no		yes		Pointless
+Service files compatible between distributions			* yes?		no		yes
+Signal delivery to services	 				* no		no		yes		Pointless? In OpenRC
+Reliable termination of user sessions before shutdown		* no		no		yes		Pointless
+utmp/wtmp support    	     	      	     			yes		yes		yes
+Easily readable, writable and extensible service files		* yes		??		no
+... suitable for manipulation with enterprise management tools	* no		no		yes
+
+[0] Proprietary??
+
+-- available native service settings ---  These thing are often possible to configure by editing the scripts, less bloating
+OOM Adjustment		      	   	      		 	no		yes		yes
+Working Directory	      					no		yes		yes             Pointless?
+Root Directory (chroot)     					no		yes		yes
+Environment Variables	      					no		yes		yes
+Environment Variables from external file			no		no		yes
+Resource Limits	      	   	    				no		some		yes
+umask	 							no		yes		yes
+User/Group/Supplementary Groups					no		no		yes		Pointless
+IO Scheduling Class/Priority					no		no		yes
+CPU Scheduling Nice Value					no		yes		yes
+CPU Scheduling Policy/Priority					no		no		yes
+CPU Scheduling Reset on fork control				no		no		yes
+CPU affinity   	     	       					no		no		yes
+Timer Slack    							no		no		yes
+Capabilities Control						no		no		yes
+Secure Bits Control 						no		no		yes
+Control Group Control						no		no		yes
+High-level file system namespace control:
+    making directories inacessible				no		no		yes
+    making directories read-only				no		no		yes
+    private /tmp						no		no		yes		Pointless
+    mount inheritance  						no		no		yes		??
+Input on Console       						yes		yes	  	yes		Why??
+Output on Syslog       						no		no	  	yes
+Output on kmsg/dmesg   						no		no	  	yes
+Output on arbitrary TTY		 				no		no		yes
+Suppression of output						* yes		??		no?
+Kill signal control 						no		no	  	yes             Pointless?
+Conditional execution:
+    by identified CPU virtualisation/container			no		no		yes		Pointless?
+    by file existance 						no		no		yes		Pointless?
+    by security framework					no		no		yes		Pointless?
+    by kernel command line					no		no		yes
+    by runlevel	      						* yes		??		no?		[1]
+
+[1] Should however be emulateable if supporting kernal command line conditional execution
+
+--- miscellaneous ---
+Maturity							> 15 years      6 years		1 year		Pointless
+Specialised professional consulting and
+engineering services available					no, * no	no		yes		Pointless
+Source code management system					svn, * git	bzr		git		Pointless
+Copyright-assignment-free contributing				yes    		no		yes
+
+systemd unbiased part not from systemd website:::
+
+multiple distributions using it					yes		yes		yes		In OpenRC
+portable to non-x86 non-linux					yes, *yes?	yes		no		In OpenRC
+parallel service startup					* yes		yes		yes		In OpenRC
+per-service resource limits (ulimit)				* no		no		yes		In OpenRC
+separation of code and configuration (init.d / conf.d )		* yes		no		no		In OpenRC
+easily extensible startup scripts				* yes		mostly-yes	no		In OpenRC
+friendly upstream						yes, * yes	hell no		no		In OpenRC
+friendly license (BSD)						no	        no		no		In OpenRC
+strong free license (GPL)					yes, * yes	yes		yes
+stateful init scripts (is it started already?)			* yes		(no)		yes		In OpenRC
+complex init scripts to start multiple components		* daemond	yes    		no		In OpenRC
+automatic dependency calculation and service ordering	  	no		(no)	   	(yes)		In OpenRC
+minimal dependencies and footprint   	     			yes, * yes	yes		no		In OpenRC
+proper integration into container/virtualisation 		(yes)  		(yes)		??		In OpenRC
+proper modular architecture and
+separation of optional components				yes		(yes)		no
+expressive and flexible network handling			??		??		(no)		In OpenRC
+support for bare-metal bare-dependency servers			yes, * ??	yes		no		In OpenRC
+verbose debug mode						yes, * yes	yes		(no)		In OpenRC
+
+persistent blacklight configuration				* rc.local.d	??		yes
+configuration of cursor blinking				* rc.local.d	no?		no?
+configuration of cursor type					* rc.local.d	no?		no?
+deallocation of unused TTY:s					* rc.local.d	no?		manditory??
+correction of /run/lock permissions				* rc.local.d	??		no?
+configuration of default TTY palette				* rc.local.d	no?		no?
+randomisation of SYSLINUX configurations			* rc.local.d	no		no
+documentation 	 	  					good, * good	??		bad
+multihoming							* easy		??		difficult?
+continued daemon loading when getty has started			* [2]		??		no?
+use of human and maching readable log files			yes		yes		no
+intention to keep to the unix philosophy			yes		??		just the opposite
+
+[2] possible and configurable in daemond,
+    manditory with rc.d if using parallelisation otherwise no
+
+
+====================== Subjective summary: sysvinit + pony-initialisation versus systemd ======================
+
+::subject			       				::winner
+Mandatory DBus dependency					pony-initialisation
+Hard-to-debug monolitic startup in undocumented C		pony-initialisation
+Shell-free bootup						pony-initialisation
+Modular C coded early boot services included			pony-initialisation
+Read-Ahead							systemd
+Socket-based Activation						systemd
+Socket-based Activation: inetd compatibility			systemd
+Bus-based Activation						systemd
+Device-based Activation						systemd
+Configuration of device dependencies with udev rules		systemd
+Path-based Activation (inotify)					systemd
+Timer-based Activation						pony-initialisation
+Mount handling							tied
+fsck handling  	    	    					tied
+Swap handling							tied
+Snapshotting of system state					systemd
+Linux Control Groups Integration				systemd
+Audit record generation for started services			systemd
+SELinux integration						pony-initialisation
+Encrypted hard disk handling (LUKS)				tied
+SSL Certificate/LUKS Password handling, including
+Plymouth, Console, wall, TTY and GNOME agents			systemd
+Network Loopback device handling				?
+binfmt_misc handling						pony-initialisation
+System-wide locale handling					tied
+Console and keyboard setup					tied
+Infrastructure for creating, removing, cleaning up
+of temporary and volatile files					pony-initialisation
+Handling for /proc/sys sysctl					pony-initialisation
+Plymouth integration   						pony-initialisation
+Save/restore random seed					tied
+Static loading of kernel modules				tied
+Automatic serial console handling				systemd
+Unique Machine ID handling					systemd
+Dynamic host name and machine meta data handling		?
+Reliable termination of services				?
+Early boot /dev/log logging					systemd
+Minimal kmsg-based syslog daemon for embedded use		systemd?
+Respawning on service crash without losing connectivity		?
+Gapless service upgrades					?
+Graphical UI							pony-initialisation
+Instantiated services  						?
+PolicyKit integration						pony-initialisation
+Can list all processes of a service 	 			systemd
+Automatic per-service CPU cgroups to
+even out CPU usage between them					systemd
+Automatic per-user cgroups 					systemd?
+Reexecution with full serialization of state			tied
+Interactive boot-up   		       				?
+Container support (as advanced chroot replacement)		systemd
+Dependency-based bootup	       					tied
+Disabling of services without editing files			tied
+Masking of services without editing files			systemd
+Robust system shutdown within PID 1 				pony-initialisation
+Built-in kexec support 	      	  				tied
+Dynamic service generation					pony-initialisation
+Signal delivery to services	 				pony-initialisation?
+Reliable termination of user sessions before shutdown		pony-initialisation
+utmp/wtmp support    	     	      	     			tied
+Easily readable, writable and extensible service files		pony-initialisation
+... suitable for manipulation with enterprise management tools	systemd
+
+Root Directory (chroot)     					systemd
+Resource Limits	      	   	    				systemd
+IO Scheduling Class/Priority					systemd
+CPU Scheduling Policy/Priority					systemd
+Timer Slack    							systemd
+Capabilities Control						systemd
+Secure Bits Control 						systemd
+Control Group Control						systemd
+Output on Syslog       						systemd
+Output on kmsg/dmesg   						systemd
+Suppression of output						pony-initialisation
+Conditional execution: by kernel command line			systemd
+Conditional execution: by runlevel	      			pony-initialisation
+
+--- miscellaneous ---
+Copyright-assignment-free contributing				tied
+portable to non-x86 non-linux					pony-initialisation
+parallel service startup					tied
+per-service resource limits (ulimit)				systemd
+separation of code and configuration (init.d / conf.d )		pony-initialisation
+easily extensible startup scripts				pony-initialisation
+friendly upstream						pony-initialisation
+friendly license (BSD)						tied
+strong free license (GPL)					tied
+stateful init scripts (is it started already?)			tied
+complex init scripts to start multiple components		pony-initialisation (develop branch)
+automatic dependency calculation and service ordering	  	pony-initialisation
+minimal dependencies and footprint   	     			pony-initialisation
+proper integration into container/virtualisation 		?
+proper modular architecture and
+separation of optional components				pony-initialisation
+expressive and flexible network handling			?
+support for bare-metal bare-dependency servers			pony-initialisation
+verbose debug mode						pony-initialisation
+
+persistent blacklight configuration				tied
+configuration of cursor blinking				pony-initialisation?
+configuration of cursor type					pony-initialisation?
+deallocation of unused TTY:s					pony-initialisation?
+correction of /run/lock permissions				pony-initialisation?
+configuration of default TTY palette				pony-initialisation?
+randomisation of SYSLINUX configurations			pony-initialisation?
+documentation 	 	  					pony-initialisation
+multihoming							pony-initialisation?
+continued daemon loading when getty has started			pony-initialisation? (develop branch)
+use of human and maching readable log files			pony-initialisation
+intention to keep to the unix philosophy			pony-initialisation
+
+
+least unnecessary features					pony-initialisation
+overall	(more subjective)	 				pony-initialisation
+								  systemd can be considered for enterprise servers
+
