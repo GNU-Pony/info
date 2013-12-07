@@ -202,7 +202,6 @@ Handling for /proc/sys sysctl					pony-initialisation
 Plymouth integration   						pony-initialisation
 Save/restore random seed					tied
 Static loading of kernel modules				tied
-Automatic serial console handling				systemd
 Unique Machine ID handling					systemd
 Dynamic host name and machine meta data handling		?
 Reliable termination of services				?
