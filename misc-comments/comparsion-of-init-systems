@@ -135,7 +135,7 @@ portable to non-x86 non-linux					yes, *yes?	yes		no		In OpenRC
 parallel service startup					* yes		yes		yes		In OpenRC
 per-service resource limits (ulimit)				* no		no		yes		In OpenRC
 separation of code and configuration (init.d / conf.d )		* yes		no		no		In OpenRC
-easily extensible startup scripts				* yes		mostly-yes	no		In OpenRC
+easily extensible startup scripts				* yes		(yes)		no		In OpenRC
 friendly upstream						yes, * yes	hell no		no		In OpenRC
 friendly license (BSD)						no	        no		no		In OpenRC
 strong free license (GPL)					yes, * yes	yes		yes
@@ -282,6 +282,6 @@ intention to keep to the unix philosophy			pony-initialisation
 
 
 least unnecessary features					pony-initialisation
-overall	(more subjective)	 				pony-initialisation
+overall (more subjective)	 				pony-initialisation
 								  systemd can be considered for enterprise servers
 
