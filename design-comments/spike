@@ -1,6 +1,6 @@
 For Spike I have choosen the language Python both for Spike
 itself and for the scrolls, the reason for this is best
-expressed as an comparsion table:
+expressed as a comparsion table:
 
 ┌───────────────────────────────────────────┬──────────────┬─────────────┬──────────────┬──────────────┬─────────────┬────────────┐
 │                                           │ Make SH=bash │ GNU Bash    │ Python 2     │ Python 3     │ Java        │ Importance │
