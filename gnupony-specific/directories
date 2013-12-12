@@ -17,7 +17,7 @@
 ├──/root				Administrator directory
 ├──/run					State information
 ├──/sbin				System binaries
-├──/share				Shared user directory
+├──/shared				Shared user directory
 ├──/srv					Service data
 ├──/sys					System access files
 ├──/tmp					Temporary files
@@ -78,33 +78,6 @@
    ├──/var/spool			Non-removable cache
    │  └──/var/spool/mail		-> /var/mail
    └──/var/tmp				Preservable temporary files
-
-
-$bindir			/usr/bin
-$sysbindir		/usr/sbin
-$libdir			/lib
-$multilibdir		/usr/libmulti
-$libexecdir		/usr/libexec
-$gamedir		/usr/bin
-$datadir		/usr/share
-$docdir			/usr/doc
-$ebindir		/bin
-$esysbindir		/sbin
-$optdir			/opt
-$vardir                 /var
-$cachedir		/var/cache
-$spooldir		/var/spool
-$logdir			/var/log
-$lockdir		/var/lock
-$statedir		/var/lib
-$scoredir		/var/games
-$tmpdir			/tmp
-$ptmpdir		/var/tmp
-$srvdir			/srv
-$confdir		/etc
-$optconfdir		/etc/opt
-$infodir		/usr/share/info
-$mandir			/usr/share/man
 
 
 With optional extension that puts normal directories
@@ -191,7 +164,7 @@ in .hidden files [not like gobohide] and add:
    └──users
       ├──private		-> /home
       └──public
-         ├──shared		-> /share
+         ├──shared		-> /shared
          ├──administrated	-> /info
          └──mounted		-> /media
 
