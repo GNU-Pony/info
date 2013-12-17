@@ -44,7 +44,7 @@ Plymouth integration   						no		yes		yes		[dep]
 Save/restore random seed					* yes		no		yes
 Static loading of kernel modules				* yes		no		yes		[linux]
 Automatic serial console handling				no		no		yes
-Unique Machine ID handling					no		no		yes		In OpenRC
+Unique Machine ID handling					* rc.local.d	no		yes		In OpenRC
 Dynamic host name and machine meta data handling		* yes?		no		yes		What metadata?
 Reliable termination of services				* ??		no		yes		In OpenRC
 Early boot /dev/log logging					no		no		yes		In OpenRC
@@ -203,7 +203,7 @@ Handling for /proc/sys sysctl					pony-initialisation
 Plymouth integration   						pony-initialisation
 Save/restore random seed					tied
 Static loading of kernel modules				tied
-Unique Machine ID handling					systemd
+Unique Machine ID handling					pony-initialisation
 Dynamic host name and machine meta data handling		?
 Reliable termination of services				?
 Early boot /dev/log logging					systemd
