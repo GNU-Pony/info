@@ -162,6 +162,7 @@ multihoming							* easy		??		difficult?
 continued daemon loading when getty has started			* [2]		??		no?
 use of human and machine readable log files			yes		yes		no
 intention to keep to the unix philosophy			yes		??		just the opposite
+easily extensible						daemond		??		no
 
 [2] possible and configurable in daemond,
     manditory with rc.d if using parallelisation otherwise no
@@ -278,6 +279,7 @@ multihoming							pony-initialisation?
 continued daemon loading when getty has started			pony-initialisation? (develop branch)
 use of human and maching readable log files			pony-initialisation
 intention to keep to the unix philosophy			pony-initialisation
+easily extensible						pony-initialisation (develop branch)
 
 
 least unnecessary features					pony-initialisation
