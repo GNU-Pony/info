@@ -33,7 +33,7 @@ PAM integration							no  		no		yes		[--]
 Encrypted hard disk handling (LUKS)				* yes		no		yes
 SSL Certificate/LUKS Password handling, including
 Plymouth, Console, wall, TTY and GNOME agents			no		no		yes		Mostly in OpenRC
-Network Loopback device handling				* ??	  	no		yes
+Network Loopback device handling				* yes	  	no		yes
 binfmt_misc handling						* rc.local.d	no		yes
 System-wide locale handling					* yes	 	no		yes
 Console and keyboard setup					* yes		no		yes
@@ -193,7 +193,7 @@ SELinux integration						pony-initialisation
 Encrypted hard disk handling (LUKS)				tied
 SSL Certificate/LUKS Password handling, including
 Plymouth, Console, wall, TTY and GNOME agents			systemd
-Network Loopback device handling				?
+Network Loopback device handling				tied
 binfmt_misc handling						pony-initialisation
 System-wide locale handling					tied
 Console and keyboard setup					tied
