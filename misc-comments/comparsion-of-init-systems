@@ -27,7 +27,7 @@ Snapshotting of system state					no		no		yes		[--]?
 XDG_RUNTIME_DIR Support						no		no		yes		[dep] Doing what?
 Optionally kills remaining processes of users logging out	no		no		yes		[--]
 Linux Control Groups Integration				no		no		yes		[linux]
-Audit record generation for started services			no		no		yes
+Audit record generation for started services			no		no		yes		[--] Pointless?
 SELinux integration						no		no		yes		[linux] [dep]
 PAM integration							no  		no		yes		[--]
 Encrypted hard disk handling (LUKS)				* yes		no		yes
@@ -185,9 +185,9 @@ Timer-based Activation						pony-initialisation
 Mount handling							tied
 fsck handling  	    	    					tied
 Swap handling							tied
-Snapshotting of system state					systemd
+Snapshotting of system state					(systemd?)
 Linux Control Groups Integration				systemd
-Audit record generation for started services			systemd
+Audit record generation for started services			pony-initialisation
 SELinux integration						pony-initialisation
 Encrypted hard disk handling (LUKS)				tied
 SSL Certificate/LUKS Password handling, including
