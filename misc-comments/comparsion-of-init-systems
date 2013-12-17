@@ -160,7 +160,7 @@ randomisation of SYSLINUX configurations			* rc.local.d	no		no
 documentation 	 	  					good, * good	??		bad
 multihoming							* easy		??		difficult?
 continued daemon loading when getty has started			* [2]		??		no?
-use of human and maching readable log files			yes		yes		no
+use of human and machine readable log files			yes		yes		no
 intention to keep to the unix philosophy			yes		??		just the opposite
 
 [2] possible and configurable in daemond,
