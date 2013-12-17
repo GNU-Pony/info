@@ -138,7 +138,7 @@ separation of code and configuration (init.d / conf.d )		* yes		no		no		In OpenR
 easily extensible startup scripts				* yes		(yes)		no		In OpenRC
 friendly upstream						yes, * yes	hell no		no		In OpenRC
 friendly license (BSD)						no	        no		no		In OpenRC
-strong free license (GPL)					yes, * yes	yes		yes
+strong free license (GPL)					yes, * yes	yes?		semi
 stateful init scripts (is it started already?)			* yes		(no)		yes		In OpenRC
 complex init scripts to start multiple components		* daemond	yes    		no		In OpenRC
 automatic dependency calculation and service ordering	  	no		(no)	   	(yes)		In OpenRC
@@ -255,7 +255,7 @@ separation of code and configuration (init.d / conf.d )		pony-initialisation
 easily extensible startup scripts				pony-initialisation
 friendly upstream						pony-initialisation
 friendly license (BSD)						tied
-strong free license (GPL)					tied
+strong free license (GPL)					pony-initialisation
 stateful init scripts (is it started already?)			tied
 complex init scripts to start multiple components		pony-initialisation (develop branch)
 automatic dependency calculation and service ordering	  	pony-initialisation
