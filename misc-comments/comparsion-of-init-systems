@@ -1,45 +1,48 @@
+[!]	Pointless feature
+[!!]	Hurting feature
 [--]	Does not belong here
 [linux]	Linux specific
 [dep]	Specific dependency without general interest
 *	In pony-initialisation
+(...)	Mostly ...
 
 systemd biased part from systemd website:::
 
 --- general features ---					sysvinit	startup?	systemd		(comment)
-Mandatory DBus dependency					no		yes		yes		[dep] Pointess
-Hard-to-debug monolitic startup in undocumented C		no		no		yes		Hurting feature
-Shell-free bootup						no		no		yes		Hurting feature
-Modular C coded early boot services included			no		no		yes		Hurting feature
-Read-Ahead							no    		ureadahead	yes
+Mandatory DBus dependency					no		yes		yes		[dep] [!]
+Hard-to-debug monolitic startup in undocumented C		no		no		yes		[!!]
+Shell-free bootup						no		no		yes		[!!]
+Modular C coded early boot services included			no		no		yes		[!!]
+Read-Ahead							multiple	multiple	yes
 Socket-based Activation						no		not parallel	yes
 Socket-based Activation: inetd compatibility			no		not parallel	yes
 Bus-based Activation						no		patch		yes
 Device-based Activation						no		no		yes
 Configuration of device dependencies with udev rules		no		no		yes
 Path-based Activation (inotify)					no	 	no		yes
-Timer-based Activation						cron/at		cron/at		reinvented [0]
+Timer-based Activation						cron/at		cron/at		yes
 Mount handling							* yes	  	(no)??		yes
 fsck handling  	    	    					* yes	  	(no)??		yes
-Quota handling							no	  	no		yes		[--]
-Automount handling						no	  	no??		yes		[--]
+Quota handling							* rc.local.d  	no		yes
+Automount handling						multiple  	multiple	yes		[--]
 Swap handling							* yes		no??		yes
 Snapshotting of system state					no		no		yes		[--]?
-XDG_RUNTIME_DIR Support						no		no		yes		[dep] Doing what?
+XDG_RUNTIME_DIR Support						no		no		yes		[dep] [!]
 Optionally kills remaining processes of users logging out	no		no		yes		[--]
 Linux Control Groups Integration				no		no		yes		[linux]
-Audit record generation for started services			no		no		yes		[--] Pointless?
+Audit record generation for started services			no		no		yes		[--] [!]?
 SELinux integration						no		no		yes		[linux] [dep]
 PAM integration							no  		no		yes		[--]
 Encrypted hard disk handling (LUKS)				* yes		no		yes
 SSL Certificate/LUKS Password handling, including
-Plymouth, Console, wall, TTY and GNOME agents			no		no		yes		Mostly in OpenRC
+Plymouth, Console, wall, TTY and GNOME agents			no		no		yes		(In OpenRC)
 Network Loopback device handling				* yes	  	no		yes
 binfmt_misc handling						* rc.local.d	no		yes
 System-wide locale handling					* yes	 	no		yes
 Console and keyboard setup					* yes		no		yes
 Infrastructure for creating, removing, cleaning up
-of temporary and volatile files					no		no		yes		Pointless
-Handling for /proc/sys sysctl					no		no		yes		Pointless
+of temporary and volatile files					no		no		yes		[!]
+Handling for /proc/sys sysctl					no		no		yes		[!]
 Plymouth integration   						no		yes		yes		[dep]
 Save/restore random seed					* yes		no		yes
 Static loading of kernel modules				* yes		no		yes		[linux]
@@ -70,28 +73,26 @@ Container support (as advanced chroot replacement)		no		no		yes		In OpenRC
 Dependency-based bootup	       					* yes		no		yes		In OpenRC
 Disabling of services without editing files			yes		no		yes
 Masking of services without editing files			no		no		yes
-Robust system shutdown within PID 1 				no		no		yes		Pointless
+Robust system shutdown within PID 1 				no		no		yes		[!]
 Built-in kexec support 	      	  				* yes		no		yes
 Dynamic service generation					no		no		yes
-Upstream support in various other OS components			yes, * no	no		yes		Pointless
+Upstream support in various other OS components			yes, * no	no		yes		[!]
 Service files compatible between distributions			* yes?		no		yes
-Signal delivery to services	 				* no		no		yes		Pointless? In OpenRC
-Reliable termination of user sessions before shutdown		* no		no		yes		Pointless
+Signal delivery to services	 				* no		no		yes		[!]? In OpenRC
+Reliable termination of user sessions before shutdown		* no		no		yes		[!]
 utmp/wtmp support    	     	      	     			yes		yes		yes
 Easily readable, writable and extensible service files		* yes		??		no
-... suitable for manipulation with enterprise management tools	* no		no		yes
-
-[0] Proprietary??
+... suitable for manipulation with enterprise management tools	* no		no		yes 
 
 -- available native service settings ---  These thing are often possible to configure by editing the scripts, less bloating
 OOM Adjustment		      	   	      		 	no		yes		yes
-Working Directory	      					no		yes		yes             Pointless?
+Working Directory	      					no		yes		yes             [!]?
 Root Directory (chroot)     					no		yes		yes
 Environment Variables	      					no		yes		yes
 Environment Variables from external file			no		no		yes
 Resource Limits	      	   	    				no		some		yes
 umask	 							no		yes		yes
-User/Group/Supplementary Groups					no		no		yes		Pointless
+User/Group/Supplementary Groups					no		no		yes		[!]
 IO Scheduling Class/Priority					no		no		yes
 CPU Scheduling Nice Value					no		yes		yes
 CPU Scheduling Policy/Priority					no		no		yes
@@ -104,18 +105,18 @@ Control Group Control						no		no		yes
 High-level file system namespace control:
     making directories inacessible				no		no		yes
     making directories read-only				no		no		yes
-    private /tmp						no		no		yes		Pointless
+    private /tmp						no		no		yes		[!]
     mount inheritance  						no		no		yes		??
 Input on Console       						yes		yes	  	yes		Why??
 Output on Syslog       						no		no	  	yes
 Output on kmsg/dmesg   						no		no	  	yes
 Output on arbitrary TTY		 				no		no		yes
 Suppression of output						* yes		??		no?
-Kill signal control 						no		no	  	yes             Pointless?
+Kill signal control 						no		no	  	yes             [!]?
 Conditional execution:
-    by identified CPU virtualisation/container			no		no		yes		Pointless?
-    by file existance 						no		no		yes		Pointless?
-    by security framework					no		no		yes		Pointless?
+    by identified CPU virtualisation/container			no		no		yes		[!]?
+    by file existance 						no		no		yes		[!]?
+    by security framework					no		no		yes		[!]?
     by kernel command line					no		no		yes
     by runlevel	      						* yes		??		no?		[1]
 
@@ -175,7 +176,7 @@ Mandatory DBus dependency					pony-initialisation
 Hard-to-debug monolitic startup in undocumented C		pony-initialisation
 Shell-free bootup						pony-initialisation
 Modular C coded early boot services included			pony-initialisation
-Read-Ahead							systemd
+Read-Ahead							tied
 Socket-based Activation						systemd
 Socket-based Activation: inetd compatibility			systemd
 Bus-based Activation						systemd
@@ -186,6 +187,7 @@ Timer-based Activation						pony-initialisation
 Mount handling							tied
 fsck handling  	    	    					tied
 Swap handling							tied
+Quota handling							tied
 Snapshotting of system state					(systemd?)
 Linux Control Groups Integration				systemd
 Audit record generation for started services			pony-initialisation
