@@ -68,7 +68,7 @@ SysV compatibility 						yes		yes		yes
 SysV services controllable like native services			yes		no		yes
 SysV-compatible /dev/initctl	       				yes		no		yes
 Reexecution with full serialization of state			yes		no		yes
-Interactive boot-up   		       				(no)		(no)		yes		In OpenRC
+Interactive boot-up [1]		       				(no)		(no)		yes		In OpenRC
 Container support (as advanced chroot replacement)		no		no		yes		In OpenRC
 Dependency-based bootup	       					* yes		no		yes		In OpenRC
 Disabling of services without editing files			yes		no		yes
@@ -83,6 +83,8 @@ Reliable termination of user sessions before shutdown		* no		no		yes		[!]
 utmp/wtmp support    	     	      	     			yes		yes		yes
 Easily readable, writable and extensible service files		* yes		??		no
 ... suitable for manipulation with enterprise management tools	* no		no		yes 
+
+[1] Basically, this is the possibility for the user to during boot select to manually confirm which services to start
 
 -- available native service settings ---  These thing are often possible to configure by editing the scripts, less bloating
 OOM Adjustment		      	   	      		 	no		yes		yes
