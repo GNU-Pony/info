@@ -4,6 +4,9 @@
 ├──/dev					Device files
 │  └──/dev/shm				Shared memory
 ├──/etc					Host-specific configuration
+│  ├──/alternatives			Mechanism for configuring symbolic commands
+│  ├──/alternatives.providers		Possible providers for symbolic commands
+│  ├──/etc/skel				User skeleton
 │  └──/etc/opt				Configuration files for /opt/
 ├──/home				User directories
 ├──/info				Administrated shared files
