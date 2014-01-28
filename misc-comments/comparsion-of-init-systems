@@ -14,8 +14,8 @@ Hard-to-debug monolitic startup in undocumented C		no		no		yes		[!!]
 Shell-free bootup						no		no		yes		[!!]
 Modular C coded early boot services included			no		no		yes		[!!]
 Read-Ahead							multiple	multiple	yes
-Socket-based Activation						no		not parallel	yes
-Socket-based Activation: inetd compatibility			no		not parallel	yes
+Socket-based Activation						inetd		not parallel	yes
+Socket-based Activation: inetd compatibility			inetd		not parallel	yes
 Bus-based Activation						no		patch		yes
 Device-based Activation						no		no		yes
 Configuration of device dependencies with udev rules		no		no		yes
@@ -125,10 +125,10 @@ Conditional execution:
 [1] Should however be emulateable if supporting kernal command line conditional execution
 
 --- miscellaneous ---
-Maturity							> 15 years      6 years		1 year		Pointless
+Maturity							ancient		2006Q3		2010Q1		[!]
 Specialised professional consulting and
-engineering services available					no, * no	no		yes		Pointless
-Source code management system					svn, * git	bzr		git		Pointless
+engineering services available					no, * no	no		yes		[!]
+Source code management system					svn, * git	bzr		git		[!]
 Copyright-assignment-free contributing				yes    		no		yes
 
 systemd unbiased part not from systemd website:::
@@ -167,6 +167,8 @@ use of human and machine readable log files			yes		yes		no
 intention to keep to the unix philosophy			yes		??		just the opposite
 easily extensible						daemond		??		no
 respawns daemons on daemon crash				possible	??		yes
+acpid replacement built-in 					no		??		yes		[!]
+three-finger-salute support					yes		yes		yes		[!]
 
 [2] possible and configurable in daemond,
     manditory with rc.d if using parallelisation otherwise no
@@ -180,8 +182,8 @@ Hard-to-debug monolitic startup in undocumented C		pony-initialisation
 Shell-free bootup						pony-initialisation
 Modular C coded early boot services included			pony-initialisation
 Read-Ahead							tied
-Socket-based Activation						systemd
-Socket-based Activation: inetd compatibility			systemd
+Socket-based Activation						tied
+Socket-based Activation: inetd compatibility			tied
 Bus-based Activation						systemd
 Device-based Activation						systemd
 Configuration of device dependencies with udev rules		systemd
@@ -223,7 +225,7 @@ Automatic per-service CPU cgroups to
 even out CPU usage between them					systemd
 Automatic per-user cgroups 					systemd?
 Reexecution with full serialization of state			tied
-Interactive boot-up   		       				?
+Interactive boot-up   		       				pony-initialisation
 Container support (as advanced chroot replacement)		systemd
 Dependency-based bootup	       					tied
 Disabling of services without editing files			tied
@@ -286,6 +288,8 @@ use of human and maching readable log files			pony-initialisation
 intention to keep to the unix philosophy			pony-initialisation
 easily extensible						pony-initialisation (develop branch)
 respawns daemons on daemon crash				pony-initialisation
+acpid replacement built-in					pony-initialisation
+three-finger-salute support					tied
 
 
 least unnecessary features					pony-initialisation
