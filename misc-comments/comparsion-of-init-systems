@@ -166,6 +166,7 @@ continued daemon loading when getty has started			* [2]		??		no?
 use of human and machine readable log files			yes		yes		no
 intention to keep to the unix philosophy			yes		??		just the opposite
 easily extensible						daemond		??		no
+respawns daemons on daemon crash				possible	??		yes
 
 [2] possible and configurable in daemond,
     manditory with rc.d if using parallelisation otherwise no
@@ -284,6 +285,7 @@ continued daemon loading when getty has started			pony-initialisation? (develop 
 use of human and maching readable log files			pony-initialisation
 intention to keep to the unix philosophy			pony-initialisation
 easily extensible						pony-initialisation (develop branch)
+respawns daemons on daemon crash				pony-initialisation
 
 
 least unnecessary features					pony-initialisation
