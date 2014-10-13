@@ -1,0 +1,481 @@
+This document is compiled from selected parts from
+http://linuxfonts.narod.ru/why.linux.is.not.ready.for.the.desktop.current.html
+(© 2009-2014 Artem S. Tashkinov)
+
+------------------------------------------------------------------------------
+
+Issues in GNU/Linux that makes it not prefectly desktop ready for everypony.
+Issues that I do not consider to actually be issues or only be issues if
+you do not mind using non-free software has been filtered out, so has issues
+that I do not consider to be issues when using GNU/Pony as its design focus
+suggests. Additionally issues that are wide spread and stems strictly from
+human nature as been filtered out sense that cannot really be fixed.
+
+As noted in the source document, these are generally not issues solved in any
+other system. If all these issues are solved GNU/Linux with work perfectly and
+be a total masterpiece for everypony.
+
+------------------------------------------------------------------------------
+
+Hardware support:
+
+	Video accelerators/acceleration (also see the X system section).
+
+		(!) NVIDIA Optimus technology and ATI dynamic GPU switching are
+		    still not supported on Linux out of the box in any existing
+		    distro. AMD hybrid graphics support is lousy and very incomplete.
+
+		(!) Open source drivers have lower quality than their closed source
+		    proprietary counterparts: Intel, NVIDIA and AMD drivers:
+
+			(!) All three open source drivers (AMD, Intel and NVIDIA)
+			    have a significantly lower performance then their
+			    proprietary counterpars (for Intel that's their Windows
+			    driver).
+
+			(!) The most recent test shows that open source AMD and
+			    NVIDIA drivers struggle to properly support many types
+			    of video cards.
+
+			(!) Open Source NVIDIA driver do not properly and fully
+			    support power management features and fan speed management.
+
+			(!) Open Source NVIDIA driver is much slower (up to five
+			    times) than their propriatary counterparts due to
+			    missing power management.
+
+			OpenCL and multiGPU rendering are not supported by open
+			source drivers.
+
+			The lack of suitable performance counters support due to
+			different issues.
+
+		(!) Mesa problems (Open source OpenGL stack):
+
+			All open source graphics drivers feature very incomplete and
+			outdated OpenGL implementation (OpenGL 3.3 as for the beginning
+			of 2014, whereas OpenGL 4.0 was released in March, 2010).
+
+			The complete OpenGL stack cannot be legally implemented in/imported
+			into Linux because many OpenGL features (like S3TC texture compression
+			and floating point textures) are patented.
+
+			Bad shape of Mesa.
+
+	Audio subsystem:
+
+		No reliable sound system, no reliable unified software audio mixing
+		(implemented in all modern OSes except Linux), many old applications
+		still open audio output exclusively causing major user problems
+		and headache.
+
+		Too many layers of abstraction lead to the situation when the user
+		cannot determine why his audio doesn't work (ALSA kernel drivers ->
+		ALSA library ( -> dmix ) -> PulseAudio server -> Alsa library +
+		Pulse backend -> Application).
+
+	Printers, scanners and other more or less peripheral devices:
+
+		(!) There are still many printers which are not supported at all or
+		    only barely supported (amongst them are Lexmark and Canon) - some
+		    people argue that the user should research Linux compatibility
+		    before buying their hardware. What if the user decides to switch
+		    from Windows to Linux when he/she already has some hardware? When
+		    people purchase a Windows PC do they research anything? No, they
+		    rightly assume everything will work out of the box right from the
+		    get-go.
+
+		Many printers features are only implemented in Windows drivers
+		>>  
+		>>  Elaboration is required.
+		>>  
+		>>  What features are missing?? And how should the typo/spello
+		>>  in this line be correct?. I do not feel that I am missing anything.
+		>>
+
+		(!) Some models of scanners and (web-)cameras are still inadequately
+		    supported (again many features from Windows drivers are missing)
+		    or not supported at all.
+
+		Incomplete or unstable drivers for some hardware. Problems setting up
+		some hardware (like sound cards or TV tuners/Web Cameras/Wi-Fi cards).
+
+	Laptops/notebooks special buttons and features often don't work (e.g. Fn +
+	F1-F12 combination or special power saving modes).
+	>>  
+	>>  They have to be manually enabled.
+	>>  
+
+	(!) An insane number of regressions in the Linux kernel, when with every new
+	    kernel release some hardware can stop working inexplicably.
+	    >>  
+	    >>  Long term support kernel as fallback for the win!
+	    >>  
+
+	(!) Incomplete or missing support for many power saving features modern
+	    laptops employ (like e.g. PCIe ASPM, proper video decoding acceleration,
+	    deep power saving states, etc.) thus under Linux you won't get the same
+	    battery life as under Windows or MacOS and you laptop will run a lot
+	    hotter. Jupiter.
+
+Software support:
+
+	X system:
+	>>  
+	>>  This should be considered low priority as Wayland and Mir is
+	>>  emerging. Exactly which problems will arise or be resolved by
+	>>  Wayland and Mir is unknown to me.
+	>>  Additionally I have started the mds project to address serval
+	>>  design issues in X.org and even Wayland and Mir.
+	>>  
+
+		X.org is largely outdated, unsuitable and even insecure for modern
+		PCs and applications.
+		>>  
+		>>  mds is addressing everything but security, but addressing
+		>>  the security is not impossbile. Additionally Wayland is
+		>>  addressing the security as one of its primary goals.
+		>>  
+
+		No high level, stable, sane (truly forward and backward compatible)
+		and standardized API for developing GUI applications (like core
+		Win32 API - most Windows 95 applications still run fine in Windows
+		8 - that's 18 years of binary compatibility). Both GTK and Qt
+		(incompatible GTK versions 1, 2, 3 and incompatible Qt versions
+		2, 3, 4, 5 just for the last decade) don't strive to be backwards
+		compatible.
+
+		(!) Keyboard shortcuts handling for people using local keyboard
+		    layouts is broken (this bug is now 10 years old).
+		    >>  
+		    >>  This is getting addressed in mds.
+		    >>  
+
+		(!) X.org doesn't automatically switch between desktop resolutions
+		    if you have a full screen application with a custom resolution
+		    running - strangely some Linux developers oppose to the whole
+		    idea of games on Linux. Valve has released Steam for Linux and
+		    they are now porting their games for Linux - but that's a drop
+		    in the bucket.
+		    >>  
+		    >>  This will be addressed in mds.
+		    >>  
+
+		(!) X.org doesn't restore gamma (which can be perceived as increased
+		    brightness) settings on application exit.
+		    >>  
+		    >>  This is getting addressed in mds.
+		    >>  
+
+		(!) Scrolling in various applications causes artifacts.
+
+		(!) X.org allows applications to exclusively grab keyboard and
+		    mouse input. If such applications misbehave you are left with
+		    a system you cannot manage, you cannot even switch to text
+		    terminals.
+		    >>  
+		    >>  This is getting addressed in mds.
+		    >>  
+
+		(!) Keyboard handling in X.org is broken by design - when you have
+		    a pop up or an open menu, global keyboard shortcuts/keybindings
+		    don't (GTK) work (QT).
+		    >>  
+		    >>  This is getting addressed in mds.
+		    >>  
+
+		(!) Another keyboard handling issue is that in many situtations
+		    applications shortcuts do not work (Qt4) when you have a
+		    different than the English US keyboard layout.
+		    >>  
+		    >>  This is getting addressed in mds.
+		    >>  Isn't this the same thing as "Keyboard shortcuts handling for
+		    >>  people using local keyboard layouts is broken"?
+		    >>  
+
+		(!) X.org architecture is inherently insecure - even if you run a
+		    desktop GUI application under a different user in your desktop
+		    session, e.g. using sudo and xhost, then that "foreign"
+		    application can grab any input events and also make
+		    screenshots of the entire screen.
+		    >>  
+		    >>  Wayland is addressing this, and it would be possible, but is
+		    >>  not a priority, to address in mds.
+		    >>  
+
+		Under some circumstances GUI becomes slow and unresponsive (video
+		drivers performance, video drivers breakage (thus using software
+		accelerated VESA drivers), notorious bug 12309 - it's ostensibly
+		fixed but some people still experience it)
+
+		(!) X.org server currently has no means of permanently storing and
+		    restoring settings changed by the user (xrender settings, Xv
+		    settings, etc.). NVIDIA and ATI proprietary drivers both employ
+		    custom utilities for this purpose.
+		    >>  
+		    >>  Settings should be saved explicitly, not automatically.
+		    >>  Personally I save them in ~/.xinitrc, but I guess a tool
+		    >>  for it could also be written for those that use GUI tools
+		    >>  for changing settings.
+		    >>  
+
+		(!!) X.org has no means of providing a tear free experience, it's
+		     only available if you're running a compositing window manager
+		     in the OpenGL mode with vsync-to-blank enabled.
+		     >>  
+		     >>  Wayland is addressing this, and it would be possible, but is
+		     >>  not a priority, to address in mds.
+		     >>  
+		
+		(!!) X.org is not multithreaded. Certain applications running intensive
+		     graphical operations can easily freeze your desktop.
+		
+		There's no way to replace/upgrade/downgrade X.org graphics drivers
+		on the fly (simply put - to restart X server while retaining a user
+		session and running applications).
+		>>  
+		>>  This is getting addressed in mds.
+		>>  
+
+		X.org 2D acceleration technologies and APIs aren't as mature and
+		fast as Direct2D and DirectWrite in Windows. This is proven by the
+		fact that standards based HTML5 demos which contain 2D animations
+		and transformations work up to a thousand times faster in Windows
+		than in Linux (to be fair MacOS X has the same issue).
+
+		Adding custom modelines in Linux is a major PITA.
+		>>  
+		>>  Elaboration is required.
+		>>  
+		
+		(!) X.org totally sucks (IOW doesn't work at all in regard to old
+		    applications) when it comes to supporting tiled displays, for
+		    instance modern 4K displays (Dell UP3214Q, Dell UP2414Q, ASUS
+		    PQ321QE, Seiko TVs and others). This is yet another
+		    architectural limitation.
+		    >>  
+		    >>  I would be surprised if this is not addressed in Wayland.
+		    >>  
+		
+		(!!) HiDPI support is pretty much non-existent.
+		     >>  
+		     >>  I think this is getting addressed in Wayland and Mir.
+		     >>  
+
+		Multiple concurrent users sessions under X.org works badly and it
+		is implemented as a hack. For every user a new X.org server has to
+		be started.
+		>>  
+		>>  Whilst an issue, I prefer it this way.
+		>>  
+
+	Wayland:
+	>>  
+	>>  There are some issues in Wayland, but I do not beleave in Wayland's
+	>>  design, but see mds. Because if this I have omitted all of them.
+	>>  
+
+	Font rendering (which is implemented via high level GUI libraries) issues:
+	>>  
+	>>  I am not sure I agree with these issues.
+	>>  Perhaps examples are required for elaboration.
+	>>  
+
+		(!) White or light-colored fonts antialiasing on dark backgrounds
+		    (without Infinality patches wich are yet to be included by
+		    default by any distro) is horrible.
+
+		(!) Web fonts under Linux look horrible.
+
+	The Linux kernel:
+	>>  
+	>>  Ack, how I want Hurd!
+	>>  
+
+		(!) The kernel cannot recover from video, sound and network drivers'
+		    crashes (I'm very sorry for drawing a comparison with Windows
+		    Vista/7/8 where this feature is implemented and works beautifully
+		    in a lot of cases).
+
+		KMS exclusively grabs video output and disallows VESA graphics modes
+		(thus it's impossible to switch different versions of graphics drivers
+		on the fly).
+
+		KMS video drivers cannot be unloaded or reloaded.
+
+		(!!) KMS has no safe mode: sometimes KMS cannot properly initialize
+		     your display and you have a dead system you cannot access at all
+		     (a kernel option "nomodeset" can save you, but it prevents KMS
+		     drivers from working at all - so either you have 80x25 text
+		     console or you have a perfectly dead display).
+
+		File descriptors and network sockets cannot be forcibly closed - it's
+		indeed unsafe to remove USB sticks without unmounting them first as
+		it leads to stale mount points, and in certain cases to oopses and
+		crashes. For the same reason you cannot modify your partitions table
+		and resize/move the root partition on the fly.
+
+		In most cases kernel crashes (= panics) are invisible if you are
+		running an X session. Moreover KMS prevents the kernel from switching
+		to plain 640x480 or 80x25 (text) VGA modes to print error messages.
+		>>
+		>>  I am not sure that the first sentence is correct.
+		>>
+
+		Very incomplete hardware sensors support, for instance, hwinfo32/64
+		detects and shows ten hardware sensors sources on my average desktop
+		PC and over 50 sensors, whilst lm-sensors detect and present just
+		four sources and 20 sensors. This situtation is even worse on laptops
+		- sometimes the only readings you get from lm-sensors are cpu cores'
+		temperetarures.
+
+	Problems stemming from the vast number of Linux distributions:
+
+		(!) Distros' repositories do not contain all available open source software
+		    (libraries conflicts don't even allow that luxury). The user should
+		    never be bothered with using ./configure && make && make install
+		    (besides it's insecure, can break things in a major way, and it sometimes
+		    simply doesn't work because the user cannot install/configure dependencies
+		    properly). It should be possible to install any software by downloading
+		    a package and double clicking it (yes, like in Windows, but probably
+		    prompting for a user/administrator password).
+		    >>  
+		    >>  Sweetie-bot is an attempt to mitigate this issue.
+		    >>  
+
+	No polish and universally followed conventions. Different applications may have
+	totally different shortcuts for the same actions, UI elements may be placed and
+	look differently, some core KDE/Gnome applications have GUI glitches. E.g. KDE's
+	start menu can become a bloody mess (that's from KDE 4.8.5 in Fedora 17).
+	>>
+	>>  I have a low priority (because GNU/Pony is more important and GUI is not)
+	>>  project called itk that can solve this when complete.
+	>>
+
+General GNU/Linux problems:
+
+	(!!) There's no guarantee whatsoever that your system will (re)boot
+	     successfully after GRUB (bootloader) or kernel updates - sometimes even
+	     minor kernel updates break the boot process. For instance Microsoft and
+	     Apple regularly update ntoskrnl.exe and mach_kernel respectively for
+	     security fixes, but it's unheard of that these updates ever compromised
+	     the boot process. GRUB updates have broken the boot process on PCs around
+	     me almost ten times. (Also see compatibility issues below).
+	     >>  
+	     >>  (ref. 1)
+	     >>  
+	     >>  Required parts to boot:
+	     >>      boot manager
+	     >>      bootloader
+	     >>      kernel image
+	     >>      initrd (?)
+	     >>	     sysvinit (or replacement, but not rc scripts)
+	     >>      essential userland tools
+	     >>  
+	     >>  boot manager and bootloader is difficult, but most ponies do not
+	     >>  update their boot manager and bootloader.
+	     >>  
+	     >>  Kernel images and initrd should be preserved for a while.
+	     >>  
+	     >>	 sysvinit (or replacement) is difficult.
+	     >>	 
+	     >>  /rescue could be added for userland.
+	     >>  
+	     >>  The four first layers are ease to solve for experienced users by
+	     >>  adding duplicates to a separate harddrive, or separate partition
+	     >>  for those except the boot manager.
+	     >>  
+	     >>  Better solutions include:
+	     >>  
+	     >>      Creating a small rescue partition that can be booted from the
+	     >>      bootloader. This does not ensure that it can be booted if the
+	     >>      boot manager or bootloader breaks, but can be easily deployed
+	     >>      on a single disc system.
+	     >>  
+	     >>      Creating a minimal install on a secondary hard drive with
+	     >>      all six layers. This is almost perfect but it requires two
+	     >>      discs.
+	     >>
+	     >>  There is not sense in an automatic restore. It is better to have
+	     >>  a rescue partition that is never ever updated and contains all
+	     >>  tools required to rescue a system, including the ports tree with
+	     >>  snapshots and a package manage with snapshots, as Spike in GNU/Pony
+	     >>  has.
+
+	Some people argue that one of the problems that severely hampers the progress
+	and expansion of Linux is that Linux doesn't have a clear separation between
+	the core system and user space applications. In other words (mentioned throught
+	the article) third party developers cannot rely on a fixed set of libraries and
+	programming interfaces (API/ABI) - in most other OSes you can expect your
+	application to work for years without recompilation and extra fixes - it's
+	often not possible in Linux.
+
+	(!) Linux security/permissions management is a bloody mess: PAM, SeLinux,
+	    Udev, HAL (replaced with udisk/upower/libudev), PolicyKit, ConsoleKit
+	    and usual Unix permissions (/etc/passwd, /etc/group) all have their
+	    separate incompatible permissions management systems spread all over
+	    the file system. Quite often people cannot use their digital devices
+	    unless they switch to a super user.
+
+	No application level firewall (to clarify this point - there's no way to
+	block or allow certain applications to access the Internet, e.g.
+	/usr/bin/firefox) - SeLinux doesn't solve this problem because SeLinux
+	policies by default don't apply to normal user applications and SeLinux
+	is not a firewall solution per se.
+
+	No (easy to use) application level sandbox (like e.g. SandBoxie) - Fedora
+	is working hard on it.
+
+	(!) Very poor documentation and absence of good manuals/help system.
+	>>  
+	>>  Not completely true, the documentation is good for most parts,
+	>>  but is sometimes lacking.
+	>>  
+
+	(!) No unified widely used system for packages signing and verification
+	    (thus it becomes increasingly problematic to verify packages which
+	    are not included by your distro). No central body to issue certificates
+	    and to sign packages.
+	    >>
+	    >>  Sweetie-bot, when finished, could mitigate this issue
+	    >>
+
+	(!) A very bad backwards and forward compatibility.
+
+		Old applications rarely work in new Linux distros (glibc
+		incompatibilities (double-free errors, memory corruption, etc.),
+		missing libraries, wrong/new libraries versions). Abandoned
+		Linux GUI software generally doesn't work in newer Linux distros.
+		Most well written GUI applications for Windows 95 will work in
+		Windows 7 (15 years of compatibility on binary level).
+
+		Distro upgrade can render your system unusable
+		(kernel might not boot, some features may stop working).
+		>>  
+		>>  Solving (1) in combination with Spike will solve this issue.
+		>>  
+
+	Linux has a 255 bytes limitation for file names - not a great deal but
+	copying or using files or directories with long names from your Windows
+	PC can become a serious challange.
+	>>  
+	>>  Elaboration:  The pathname is "limited" to 4096 including NUL-termination
+	>>                and the filename is limited to 255 exluding NUL-termination.
+	>>                Pathname is absolute name, and the filename is the basename.
+	>>  
+	>>  Perhaps this could be solved in the ports tree by configuring the
+	>>  kernel or (inclusively) glibc.
+	>>  
+
+	(!) Current serious issues with the author's [Artem S. Tashkinov] own PC:
+		1) The maximum volume of my ALC892 audio codec is three to four
+		   times quieter than in Windows.
+		2) Suspend in EUFI mode is totally broken.
+
+Enterprise level Linux problems:
+
+	Most distros don't allow you to easily set up a server with e.g. such a
+	configuration: Samba, SMTP/POP3, Apache HTTP Auth and FTP where all users
+	are virtual. LDAP is a PITA. Authentication against MySQL/any other DB is
+	also a PITA.
+
