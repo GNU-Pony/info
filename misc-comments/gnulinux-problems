@@ -229,6 +229,9 @@ Software support:
 		
 		(!!) X.org is not multithreaded. Certain applications running intensive
 		     graphical operations can easily freeze your desktop.
+		     >>  
+		     >>  This is getting addressed in mds.
+		     >>  
 		
 		There's no way to replace/upgrade/downgrade X.org graphics drivers
 		on the fly (simply put - to restart X server while retaining a user
