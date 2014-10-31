@@ -61,7 +61,7 @@ list_projects ()
 	led_2=$4
 	led_3=$5
 	shift 5
-	if [ ${project} = info ]; then
+	if [ ${project} = info ] || [ ${project} = filesystem ]; then
 	  issues_suffix=idea
 	fi
 	if [ ${issues} = 1 ]; then
