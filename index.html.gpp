@@ -16,7 +16,7 @@ list_projects ()
 +  pony-initialisation     2  1 1 n  "Shell"
 +  ponyguests              0  1 0 n  "Shell, C"
 +  spike-ckeccak           0  1 0 n  "C, Python 3"
-+  splashtool              0  1 0 n  "Java, Python 3, Shell"
++  splashtool              0  1 0 n  "Bash, Python 3"
 +  system-configurations   0  1 0 n  ""
 +  unicorn                 0  1 0 n  "C"
 +  dragonfire              0  2 1 n  "Bash"
