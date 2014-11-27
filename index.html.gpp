@@ -7,7 +7,7 @@ list_projects ()
 +  celestia                0  1 0 n  "Python 3"
 +  cerberus                2  1 0 n  "C"
 +  cerberus-logging        0  1 0 n  "Shell, C"
-+  featherweight           0  0 1 n  "Python 3"
++  featherweight           0  1 1 n  "Python 3"
 +  filesystem              2  1 0 n  "Make"
 +  gates-of-tartaros       0  1 0 n  "Shell"
 +  got-diminished          0  1 0 n  "Shell, C"
