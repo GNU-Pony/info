@@ -22,7 +22,7 @@ Key file:  maandree.asc
            The word list included 27988 words of multiple languages
            and not only ASCII. The passphrase is random (using
            /dev/random), was only generated once, and does not
-           for in whole or in part a grammatically acceptable
+           form in whole or in part a grammatically acceptable
            sentence. GPG did not have any complaints on the
            passphrase. The passphrase has not been stored on
            the computer nor on-line, and after one week (I normal
