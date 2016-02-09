@@ -93,7 +93,8 @@ the GPG keys themself has also been stored encrypted (in addition the the
 partition being encrypted.)
 
 Each involved file not stored on the USB:s and the exported public key-only
-keys have been shred:ed in 10000 iterations and removed with wipesync.
+keys have been shred:ed in 10000 iterations and removed with wipesync. This
+was done hard disc drives, not one solid drives.
 
 The computer used for creation of these keys was not connected to the
 Internet or network, used encrypted partitions (including swap), and was
